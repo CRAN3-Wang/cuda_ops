@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu -o CMakeFiles/reduce_v0_global_mem.dir/reduce_v0_global_mem.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu"
+}
+]
