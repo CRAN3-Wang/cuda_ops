@@ -4,7 +4,7 @@
 # compile CUDA with /usr/local/cuda/bin/nvcc
 CUDA_DEFINES = 
 
-CUDA_INCLUDES = -isystem=/usr/local/cuda/include
+CUDA_INCLUDES = 
 
-CUDA_FLAGS = -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52]
+CUDA_FLAGS = -g --generate-code=arch=compute_52,code=[compute_52,sm_52]
 

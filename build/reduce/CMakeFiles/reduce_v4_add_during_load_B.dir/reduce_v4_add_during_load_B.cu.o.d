@@ -1,4 +1,4 @@
-reduce/CMakeFiles/reduce_v0_global_mem.dir/reduce_v0_global_mem.cu.o : /home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu \
+reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/reduce_v4_add_during_load_B.cu.o : /home/crane/dev/cuda_ops/reduce/reduce_v4_add_during_load_B.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \

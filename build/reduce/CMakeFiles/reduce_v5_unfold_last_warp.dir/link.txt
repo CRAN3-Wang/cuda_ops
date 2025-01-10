@@ -1,0 +1,1 @@
+/usr/bin/g++ CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.o -o reduce_v5_unfold_last_warp  /usr/local/cuda/lib64/libcudart.so /usr/local/cuda/lib64/libcublas.so -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"

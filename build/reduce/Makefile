@@ -130,6 +130,90 @@ reduce_v0_global_mem/fast:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v0_global_mem.dir/build.make reduce/CMakeFiles/reduce_v0_global_mem.dir/build
 .PHONY : reduce_v0_global_mem/fast
 
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule
+
+# Convenience name for target.
+reduce_v1_shared_mem: reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule
+.PHONY : reduce_v1_shared_mem
+
+# fast build rule for target.
+reduce_v1_shared_mem/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/build
+.PHONY : reduce_v1_shared_mem/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule
+
+# Convenience name for target.
+reduce_v2_no_divergence_branch: reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule
+.PHONY : reduce_v2_no_divergence_branch
+
+# fast build rule for target.
+reduce_v2_no_divergence_branch/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build
+.PHONY : reduce_v2_no_divergence_branch/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule
+
+# Convenience name for target.
+reduce_v3_no_bank_conflict: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule
+.PHONY : reduce_v3_no_bank_conflict
+
+# fast build rule for target.
+reduce_v3_no_bank_conflict/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build
+.PHONY : reduce_v3_no_bank_conflict/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule
+
+# Convenience name for target.
+reduce_v4_add_during_load_A: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule
+.PHONY : reduce_v4_add_during_load_A
+
+# fast build rule for target.
+reduce_v4_add_during_load_A/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build
+.PHONY : reduce_v4_add_during_load_A/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule
+
+# Convenience name for target.
+reduce_v4_add_during_load_B: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule
+.PHONY : reduce_v4_add_during_load_B
+
+# fast build rule for target.
+reduce_v4_add_during_load_B/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build
+.PHONY : reduce_v4_add_during_load_B/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+
+# Convenience name for target.
+reduce_v5_unfold_last_warp: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+.PHONY : reduce_v5_unfold_last_warp
+
+# fast build rule for target.
+reduce_v5_unfold_last_warp/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build
+.PHONY : reduce_v5_unfold_last_warp/fast
+
 reduce_v0_global_mem.o: reduce_v0_global_mem.cu.o
 .PHONY : reduce_v0_global_mem.o
 
@@ -154,6 +238,150 @@ reduce_v0_global_mem.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v0_global_mem.dir/build.make reduce/CMakeFiles/reduce_v0_global_mem.dir/reduce_v0_global_mem.cu.s
 .PHONY : reduce_v0_global_mem.cu.s
 
+reduce_v1_shared_mem.o: reduce_v1_shared_mem.cu.o
+.PHONY : reduce_v1_shared_mem.o
+
+# target to build an object file
+reduce_v1_shared_mem.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/reduce_v1_shared_mem.cu.o
+.PHONY : reduce_v1_shared_mem.cu.o
+
+reduce_v1_shared_mem.i: reduce_v1_shared_mem.cu.i
+.PHONY : reduce_v1_shared_mem.i
+
+# target to preprocess a source file
+reduce_v1_shared_mem.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/reduce_v1_shared_mem.cu.i
+.PHONY : reduce_v1_shared_mem.cu.i
+
+reduce_v1_shared_mem.s: reduce_v1_shared_mem.cu.s
+.PHONY : reduce_v1_shared_mem.s
+
+# target to generate assembly for a file
+reduce_v1_shared_mem.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/reduce_v1_shared_mem.cu.s
+.PHONY : reduce_v1_shared_mem.cu.s
+
+reduce_v2_no_divergence_branch.o: reduce_v2_no_divergence_branch.cu.o
+.PHONY : reduce_v2_no_divergence_branch.o
+
+# target to build an object file
+reduce_v2_no_divergence_branch.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/reduce_v2_no_divergence_branch.cu.o
+.PHONY : reduce_v2_no_divergence_branch.cu.o
+
+reduce_v2_no_divergence_branch.i: reduce_v2_no_divergence_branch.cu.i
+.PHONY : reduce_v2_no_divergence_branch.i
+
+# target to preprocess a source file
+reduce_v2_no_divergence_branch.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/reduce_v2_no_divergence_branch.cu.i
+.PHONY : reduce_v2_no_divergence_branch.cu.i
+
+reduce_v2_no_divergence_branch.s: reduce_v2_no_divergence_branch.cu.s
+.PHONY : reduce_v2_no_divergence_branch.s
+
+# target to generate assembly for a file
+reduce_v2_no_divergence_branch.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/reduce_v2_no_divergence_branch.cu.s
+.PHONY : reduce_v2_no_divergence_branch.cu.s
+
+reduce_v3_no_bank_conflict.o: reduce_v3_no_bank_conflict.cu.o
+.PHONY : reduce_v3_no_bank_conflict.o
+
+# target to build an object file
+reduce_v3_no_bank_conflict.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/reduce_v3_no_bank_conflict.cu.o
+.PHONY : reduce_v3_no_bank_conflict.cu.o
+
+reduce_v3_no_bank_conflict.i: reduce_v3_no_bank_conflict.cu.i
+.PHONY : reduce_v3_no_bank_conflict.i
+
+# target to preprocess a source file
+reduce_v3_no_bank_conflict.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/reduce_v3_no_bank_conflict.cu.i
+.PHONY : reduce_v3_no_bank_conflict.cu.i
+
+reduce_v3_no_bank_conflict.s: reduce_v3_no_bank_conflict.cu.s
+.PHONY : reduce_v3_no_bank_conflict.s
+
+# target to generate assembly for a file
+reduce_v3_no_bank_conflict.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/reduce_v3_no_bank_conflict.cu.s
+.PHONY : reduce_v3_no_bank_conflict.cu.s
+
+reduce_v4_add_during_load_A.o: reduce_v4_add_during_load_A.cu.o
+.PHONY : reduce_v4_add_during_load_A.o
+
+# target to build an object file
+reduce_v4_add_during_load_A.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/reduce_v4_add_during_load_A.cu.o
+.PHONY : reduce_v4_add_during_load_A.cu.o
+
+reduce_v4_add_during_load_A.i: reduce_v4_add_during_load_A.cu.i
+.PHONY : reduce_v4_add_during_load_A.i
+
+# target to preprocess a source file
+reduce_v4_add_during_load_A.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/reduce_v4_add_during_load_A.cu.i
+.PHONY : reduce_v4_add_during_load_A.cu.i
+
+reduce_v4_add_during_load_A.s: reduce_v4_add_during_load_A.cu.s
+.PHONY : reduce_v4_add_during_load_A.s
+
+# target to generate assembly for a file
+reduce_v4_add_during_load_A.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/reduce_v4_add_during_load_A.cu.s
+.PHONY : reduce_v4_add_during_load_A.cu.s
+
+reduce_v4_add_during_load_B.o: reduce_v4_add_during_load_B.cu.o
+.PHONY : reduce_v4_add_during_load_B.o
+
+# target to build an object file
+reduce_v4_add_during_load_B.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/reduce_v4_add_during_load_B.cu.o
+.PHONY : reduce_v4_add_during_load_B.cu.o
+
+reduce_v4_add_during_load_B.i: reduce_v4_add_during_load_B.cu.i
+.PHONY : reduce_v4_add_during_load_B.i
+
+# target to preprocess a source file
+reduce_v4_add_during_load_B.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/reduce_v4_add_during_load_B.cu.i
+.PHONY : reduce_v4_add_during_load_B.cu.i
+
+reduce_v4_add_during_load_B.s: reduce_v4_add_during_load_B.cu.s
+.PHONY : reduce_v4_add_during_load_B.s
+
+# target to generate assembly for a file
+reduce_v4_add_during_load_B.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/reduce_v4_add_during_load_B.cu.s
+.PHONY : reduce_v4_add_during_load_B.cu.s
+
+reduce_v5_unfold_last_warp.o: reduce_v5_unfold_last_warp.cu.o
+.PHONY : reduce_v5_unfold_last_warp.o
+
+# target to build an object file
+reduce_v5_unfold_last_warp.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.o
+.PHONY : reduce_v5_unfold_last_warp.cu.o
+
+reduce_v5_unfold_last_warp.i: reduce_v5_unfold_last_warp.cu.i
+.PHONY : reduce_v5_unfold_last_warp.i
+
+# target to preprocess a source file
+reduce_v5_unfold_last_warp.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.i
+.PHONY : reduce_v5_unfold_last_warp.cu.i
+
+reduce_v5_unfold_last_warp.s: reduce_v5_unfold_last_warp.cu.s
+.PHONY : reduce_v5_unfold_last_warp.s
+
+# target to generate assembly for a file
+reduce_v5_unfold_last_warp.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.s
+.PHONY : reduce_v5_unfold_last_warp.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,9 +391,33 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... reduce_v0_global_mem"
+	@echo "... reduce_v1_shared_mem"
+	@echo "... reduce_v2_no_divergence_branch"
+	@echo "... reduce_v3_no_bank_conflict"
+	@echo "... reduce_v4_add_during_load_A"
+	@echo "... reduce_v4_add_during_load_B"
+	@echo "... reduce_v5_unfold_last_warp"
 	@echo "... reduce_v0_global_mem.o"
 	@echo "... reduce_v0_global_mem.i"
 	@echo "... reduce_v0_global_mem.s"
+	@echo "... reduce_v1_shared_mem.o"
+	@echo "... reduce_v1_shared_mem.i"
+	@echo "... reduce_v1_shared_mem.s"
+	@echo "... reduce_v2_no_divergence_branch.o"
+	@echo "... reduce_v2_no_divergence_branch.i"
+	@echo "... reduce_v2_no_divergence_branch.s"
+	@echo "... reduce_v3_no_bank_conflict.o"
+	@echo "... reduce_v3_no_bank_conflict.i"
+	@echo "... reduce_v3_no_bank_conflict.s"
+	@echo "... reduce_v4_add_during_load_A.o"
+	@echo "... reduce_v4_add_during_load_A.i"
+	@echo "... reduce_v4_add_during_load_A.s"
+	@echo "... reduce_v4_add_during_load_B.o"
+	@echo "... reduce_v4_add_during_load_B.i"
+	@echo "... reduce_v4_add_during_load_B.s"
+	@echo "... reduce_v5_unfold_last_warp.o"
+	@echo "... reduce_v5_unfold_last_warp.i"
+	@echo "... reduce_v5_unfold_last_warp.s"
 .PHONY : help
 
 

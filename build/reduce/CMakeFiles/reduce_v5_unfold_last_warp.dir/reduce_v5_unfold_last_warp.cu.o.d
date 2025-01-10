@@ -1,4 +1,4 @@
-reduce/CMakeFiles/reduce_v0_global_mem.dir/reduce_v0_global_mem.cu.o : /home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu \
+reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.o : /home/crane/dev/cuda_ops/reduce/reduce_v5_unfold_last_warp.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda/include/cuda_runtime.h \
     /usr/local/cuda/include/crt/host_config.h \
