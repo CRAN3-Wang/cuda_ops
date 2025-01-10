@@ -79,6 +79,12 @@ clean: reduce/clean
 
 # Recursive "all" directory target.
 reduce/all: reduce/CMakeFiles/reduce_v0_global_mem.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v1_shared_mem.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all
 .PHONY : reduce/all
 
 # Recursive "preinstall" directory target.
@@ -87,6 +93,12 @@ reduce/preinstall:
 
 # Recursive "clean" directory target.
 reduce/clean: reduce/CMakeFiles/reduce_v0_global_mem.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v1_shared_mem.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean
 .PHONY : reduce/clean
 
 #=============================================================================
@@ -114,6 +126,162 @@ reduce_v0_global_mem: reduce/CMakeFiles/reduce_v0_global_mem.dir/rule
 reduce/CMakeFiles/reduce_v0_global_mem.dir/clean:
 	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v0_global_mem.dir/build.make reduce/CMakeFiles/reduce_v0_global_mem.dir/clean
 .PHONY : reduce/CMakeFiles/reduce_v0_global_mem.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v1_shared_mem.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v1_shared_mem.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=3,4 "Built target reduce_v1_shared_mem"
+.PHONY : reduce/CMakeFiles/reduce_v1_shared_mem.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v1_shared_mem.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule
+
+# Convenience name for target.
+reduce_v1_shared_mem: reduce/CMakeFiles/reduce_v1_shared_mem.dir/rule
+.PHONY : reduce_v1_shared_mem
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v1_shared_mem.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v1_shared_mem.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=5,6 "Built target reduce_v2_no_divergence_branch"
+.PHONY : reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule
+
+# Convenience name for target.
+reduce_v2_no_divergence_branch: reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/rule
+.PHONY : reduce_v2_no_divergence_branch
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=7,8 "Built target reduce_v3_no_bank_conflict"
+.PHONY : reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule
+
+# Convenience name for target.
+reduce_v3_no_bank_conflict: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/rule
+.PHONY : reduce_v3_no_bank_conflict
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v4_add_during_load_A.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=9,10 "Built target reduce_v4_add_during_load_A"
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule
+
+# Convenience name for target.
+reduce_v4_add_during_load_A: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/rule
+.PHONY : reduce_v4_add_during_load_A
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v4_add_during_load_B.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=11,12 "Built target reduce_v4_add_during_load_B"
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule
+
+# Convenience name for target.
+reduce_v4_add_during_load_B: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/rule
+.PHONY : reduce_v4_add_during_load_B
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=13,14 "Built target reduce_v5_unfold_last_warp"
+.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+
+# Convenience name for target.
+reduce_v5_unfold_last_warp: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+.PHONY : reduce_v5_unfold_last_warp
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

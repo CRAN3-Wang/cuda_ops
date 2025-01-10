@@ -5,23 +5,27 @@
 
 #define THREAD_PER_BLOCK 256
 
-__global__ void reduce0(float *d_input, float *d_output)
+__global__ void reduce3(float *d_input, float *d_output)
 {
+    __shared__ float shared_mem[THREAD_PER_BLOCK];
     unsigned int tid = threadIdx.x;
-    unsigned int global_tid = blockIdx.x * blockDim.x + tid;
+    unsigned int global_tid = 2 * blockIdx.x * blockDim.x + tid;
+
+    shared_mem[tid] = d_input[global_tid] + d_input[global_tid + blockDim.x];
+    __syncthreads();
 
     for (unsigned int i = 1; i < blockDim.x; i *= 2)
     {
-        if (tid % (i * 2) == 0)
+        if (tid < blockDim.x / (i * 2))
         {
-            d_input[global_tid] += d_input[global_tid + i];
+            shared_mem[tid] += shared_mem[tid + blockDim.x / (i * 2)];
             __syncthreads();
         }
     }
 
     if (tid == 0)
     {
-        d_output[blockIdx.x] = d_input[global_tid];
+        d_output[blockIdx.x] = shared_mem[tid];
     }
 }
 
@@ -43,7 +47,8 @@ int main()
     // Use cudaMalloc to alloc memory on gpu. Using double ptr for DIRECTLY modify the original d_input(make this address to point to the alloc'd gpu mem) more or less like using inference.
     cudaMalloc((void **)&d_input, N * sizeof(N));
 
-    int block_num = N / THREAD_PER_BLOCK;
+    // We will add one epoch when loading, conseqeuntly the block num reduced by half.
+    int block_num = N / THREAD_PER_BLOCK / 2;
     float *output = (float *)malloc(block_num * sizeof(float));
     float *d_output;
     cudaMalloc((void **)&d_output, block_num * sizeof(float));
@@ -58,9 +63,9 @@ int main()
     // Using cpu compute naive reduce result
     for (int i = 0; i < block_num; ++i)
     {
-        for (int j = 0; j < THREAD_PER_BLOCK; ++j)
+        for (int j = 0; j < 2 * THREAD_PER_BLOCK; ++j)
         {
-            res[i] += input[i * THREAD_PER_BLOCK + j];
+            res[i] += input[i * 2 * THREAD_PER_BLOCK + j];
         }
     }
 
@@ -68,7 +73,7 @@ int main()
 
     dim3 Grid(block_num, 1);
     dim3 Block(THREAD_PER_BLOCK, 1);
-    reduce0<<<Grid, Block>>>(d_input, d_output);
+    reduce3<<<Grid, Block>>>(d_input, d_output);
 
     cudaMemcpy(output, d_output, block_num * sizeof(float), cudaMemcpyDeviceToHost);
 

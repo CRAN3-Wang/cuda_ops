@@ -129,6 +129,84 @@ reduce_v0_global_mem/fast:
 	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v0_global_mem.dir/build.make reduce/CMakeFiles/reduce_v0_global_mem.dir/build
 .PHONY : reduce_v0_global_mem/fast
 
+#=============================================================================
+# Target rules for targets named reduce_v1_shared_mem
+
+# Build rule for target.
+reduce_v1_shared_mem: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v1_shared_mem
+.PHONY : reduce_v1_shared_mem
+
+# fast build rule for target.
+reduce_v1_shared_mem/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v1_shared_mem.dir/build.make reduce/CMakeFiles/reduce_v1_shared_mem.dir/build
+.PHONY : reduce_v1_shared_mem/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v2_no_divergence_branch
+
+# Build rule for target.
+reduce_v2_no_divergence_branch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v2_no_divergence_branch
+.PHONY : reduce_v2_no_divergence_branch
+
+# fast build rule for target.
+reduce_v2_no_divergence_branch/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build.make reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/build
+.PHONY : reduce_v2_no_divergence_branch/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v3_no_bank_conflict
+
+# Build rule for target.
+reduce_v3_no_bank_conflict: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v3_no_bank_conflict
+.PHONY : reduce_v3_no_bank_conflict
+
+# fast build rule for target.
+reduce_v3_no_bank_conflict/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build.make reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/build
+.PHONY : reduce_v3_no_bank_conflict/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v4_add_during_load_A
+
+# Build rule for target.
+reduce_v4_add_during_load_A: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v4_add_during_load_A
+.PHONY : reduce_v4_add_during_load_A
+
+# fast build rule for target.
+reduce_v4_add_during_load_A/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/build
+.PHONY : reduce_v4_add_during_load_A/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v4_add_during_load_B
+
+# Build rule for target.
+reduce_v4_add_during_load_B: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v4_add_during_load_B
+.PHONY : reduce_v4_add_during_load_B
+
+# fast build rule for target.
+reduce_v4_add_during_load_B/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build
+.PHONY : reduce_v4_add_during_load_B/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v5_unfold_last_warp
+
+# Build rule for target.
+reduce_v5_unfold_last_warp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v5_unfold_last_warp
+.PHONY : reduce_v5_unfold_last_warp
+
+# fast build rule for target.
+reduce_v5_unfold_last_warp/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build
+.PHONY : reduce_v5_unfold_last_warp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -138,6 +216,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... reduce_v0_global_mem"
+	@echo "... reduce_v1_shared_mem"
+	@echo "... reduce_v2_no_divergence_branch"
+	@echo "... reduce_v3_no_bank_conflict"
+	@echo "... reduce_v4_add_during_load_A"
+	@echo "... reduce_v4_add_during_load_B"
+	@echo "... reduce_v5_unfold_last_warp"
 .PHONY : help
 
 

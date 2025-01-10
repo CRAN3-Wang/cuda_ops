@@ -1,5 +1,11 @@
 /home/crane/dev/cuda_ops/build/CMakeFiles/edit_cache.dir
 /home/crane/dev/cuda_ops/build/CMakeFiles/rebuild_cache.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v0_global_mem.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v1_shared_mem.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v4_add_during_load_A.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v4_add_during_load_B.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/edit_cache.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/rebuild_cache.dir

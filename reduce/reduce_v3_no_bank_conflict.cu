@@ -5,23 +5,27 @@
 
 #define THREAD_PER_BLOCK 256
 
-__global__ void reduce0(float *d_input, float *d_output)
+__global__ void reduce3(float *d_input, float *d_output)
 {
+    __shared__ float shared_mem[THREAD_PER_BLOCK];
     unsigned int tid = threadIdx.x;
     unsigned int global_tid = blockIdx.x * blockDim.x + tid;
 
+    shared_mem[tid] = d_input[global_tid];
+    __syncthreads();
+
     for (unsigned int i = 1; i < blockDim.x; i *= 2)
     {
-        if (tid % (i * 2) == 0)
+        if (tid < blockDim.x / (i * 2))
         {
-            d_input[global_tid] += d_input[global_tid + i];
+            shared_mem[tid] += shared_mem[tid + blockDim.x / (i * 2)];
             __syncthreads();
         }
     }
 
     if (tid == 0)
     {
-        d_output[blockIdx.x] = d_input[global_tid];
+        d_output[blockIdx.x] = shared_mem[tid];
     }
 }
 
@@ -68,7 +72,7 @@ int main()
 
     dim3 Grid(block_num, 1);
     dim3 Block(THREAD_PER_BLOCK, 1);
-    reduce0<<<Grid, Block>>>(d_input, d_output);
+    reduce3<<<Grid, Block>>>(d_input, d_output);
 
     cudaMemcpy(output, d_output, block_num * sizeof(float), cudaMemcpyDeviceToHost);
 

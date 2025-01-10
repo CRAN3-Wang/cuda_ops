@@ -1,7 +1,37 @@
 [
 {
   "directory": "/home/crane/dev/cuda_ops/build/reduce",
-  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu -o CMakeFiles/reduce_v0_global_mem.dir/reduce_v0_global_mem.cu.o",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu -o CMakeFiles/reduce_v0_global_mem.dir/reduce_v0_global_mem.cu.o",
   "file": "/home/crane/dev/cuda_ops/reduce/reduce_v0_global_mem.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v1_shared_mem.cu -o CMakeFiles/reduce_v1_shared_mem.dir/reduce_v1_shared_mem.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v1_shared_mem.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v2_no_divergence_branch.cu -o CMakeFiles/reduce_v2_no_divergence_branch.dir/reduce_v2_no_divergence_branch.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v2_no_divergence_branch.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v3_no_bank_conflict.cu -o CMakeFiles/reduce_v3_no_bank_conflict.dir/reduce_v3_no_bank_conflict.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v3_no_bank_conflict.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v4_add_during_load_A.cu -o CMakeFiles/reduce_v4_add_during_load_A.dir/reduce_v4_add_during_load_A.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v4_add_during_load_A.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v4_add_during_load_B.cu -o CMakeFiles/reduce_v4_add_during_load_B.dir/reduce_v4_add_during_load_B.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v4_add_during_load_B.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v5_unfold_last_warp.cu -o CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v5_unfold_last_warp.cu"
 }
 ]
