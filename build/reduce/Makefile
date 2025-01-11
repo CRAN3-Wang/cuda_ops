@@ -214,6 +214,48 @@ reduce_v5_unroll_last_warp/fast:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build
 .PHONY : reduce_v5_unroll_last_warp/fast
 
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule
+
+# Convenience name for target.
+reduce_v6_completely_unroll: reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule
+.PHONY : reduce_v6_completely_unroll
+
+# fast build rule for target.
+reduce_v6_completely_unroll/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build
+.PHONY : reduce_v6_completely_unroll/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v7_block_num.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v7_block_num.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v7_block_num.dir/rule
+
+# Convenience name for target.
+reduce_v7_block_num: reduce/CMakeFiles/reduce_v7_block_num.dir/rule
+.PHONY : reduce_v7_block_num
+
+# fast build rule for target.
+reduce_v7_block_num/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/build
+.PHONY : reduce_v7_block_num/fast
+
+# Convenience name for target.
+reduce/CMakeFiles/reduce_v8_shuffle.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v8_shuffle.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v8_shuffle.dir/rule
+
+# Convenience name for target.
+reduce_v8_shuffle: reduce/CMakeFiles/reduce_v8_shuffle.dir/rule
+.PHONY : reduce_v8_shuffle
+
+# fast build rule for target.
+reduce_v8_shuffle/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/build
+.PHONY : reduce_v8_shuffle/fast
+
 reduce_v0_global_mem.o: reduce_v0_global_mem.cu.o
 .PHONY : reduce_v0_global_mem.o
 
@@ -382,6 +424,78 @@ reduce_v5_unroll_last_warp.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/reduce_v5_unroll_last_warp.cu.s
 .PHONY : reduce_v5_unroll_last_warp.cu.s
 
+reduce_v6_completely_unroll.o: reduce_v6_completely_unroll.cu.o
+.PHONY : reduce_v6_completely_unroll.o
+
+# target to build an object file
+reduce_v6_completely_unroll.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/reduce_v6_completely_unroll.cu.o
+.PHONY : reduce_v6_completely_unroll.cu.o
+
+reduce_v6_completely_unroll.i: reduce_v6_completely_unroll.cu.i
+.PHONY : reduce_v6_completely_unroll.i
+
+# target to preprocess a source file
+reduce_v6_completely_unroll.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/reduce_v6_completely_unroll.cu.i
+.PHONY : reduce_v6_completely_unroll.cu.i
+
+reduce_v6_completely_unroll.s: reduce_v6_completely_unroll.cu.s
+.PHONY : reduce_v6_completely_unroll.s
+
+# target to generate assembly for a file
+reduce_v6_completely_unroll.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/reduce_v6_completely_unroll.cu.s
+.PHONY : reduce_v6_completely_unroll.cu.s
+
+reduce_v7_block_num.o: reduce_v7_block_num.cu.o
+.PHONY : reduce_v7_block_num.o
+
+# target to build an object file
+reduce_v7_block_num.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/reduce_v7_block_num.cu.o
+.PHONY : reduce_v7_block_num.cu.o
+
+reduce_v7_block_num.i: reduce_v7_block_num.cu.i
+.PHONY : reduce_v7_block_num.i
+
+# target to preprocess a source file
+reduce_v7_block_num.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/reduce_v7_block_num.cu.i
+.PHONY : reduce_v7_block_num.cu.i
+
+reduce_v7_block_num.s: reduce_v7_block_num.cu.s
+.PHONY : reduce_v7_block_num.s
+
+# target to generate assembly for a file
+reduce_v7_block_num.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/reduce_v7_block_num.cu.s
+.PHONY : reduce_v7_block_num.cu.s
+
+reduce_v8_shuffle.o: reduce_v8_shuffle.cu.o
+.PHONY : reduce_v8_shuffle.o
+
+# target to build an object file
+reduce_v8_shuffle.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/reduce_v8_shuffle.cu.o
+.PHONY : reduce_v8_shuffle.cu.o
+
+reduce_v8_shuffle.i: reduce_v8_shuffle.cu.i
+.PHONY : reduce_v8_shuffle.i
+
+# target to preprocess a source file
+reduce_v8_shuffle.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/reduce_v8_shuffle.cu.i
+.PHONY : reduce_v8_shuffle.cu.i
+
+reduce_v8_shuffle.s: reduce_v8_shuffle.cu.s
+.PHONY : reduce_v8_shuffle.s
+
+# target to generate assembly for a file
+reduce_v8_shuffle.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/reduce_v8_shuffle.cu.s
+.PHONY : reduce_v8_shuffle.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -397,6 +511,9 @@ help:
 	@echo "... reduce_v4_add_during_load_A"
 	@echo "... reduce_v4_add_during_load_B"
 	@echo "... reduce_v5_unroll_last_warp"
+	@echo "... reduce_v6_completely_unroll"
+	@echo "... reduce_v7_block_num"
+	@echo "... reduce_v8_shuffle"
 	@echo "... reduce_v0_global_mem.o"
 	@echo "... reduce_v0_global_mem.i"
 	@echo "... reduce_v0_global_mem.s"
@@ -418,6 +535,15 @@ help:
 	@echo "... reduce_v5_unroll_last_warp.o"
 	@echo "... reduce_v5_unroll_last_warp.i"
 	@echo "... reduce_v5_unroll_last_warp.s"
+	@echo "... reduce_v6_completely_unroll.o"
+	@echo "... reduce_v6_completely_unroll.i"
+	@echo "... reduce_v6_completely_unroll.s"
+	@echo "... reduce_v7_block_num.o"
+	@echo "... reduce_v7_block_num.i"
+	@echo "... reduce_v7_block_num.s"
+	@echo "... reduce_v8_shuffle.o"
+	@echo "... reduce_v8_shuffle.i"
+	@echo "... reduce_v8_shuffle.s"
 .PHONY : help
 
 

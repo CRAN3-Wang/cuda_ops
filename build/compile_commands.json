@@ -33,5 +33,20 @@
   "directory": "/home/crane/dev/cuda_ops/build/reduce",
   "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v5_unroll_last_warp.cu -o CMakeFiles/reduce_v5_unroll_last_warp.dir/reduce_v5_unroll_last_warp.cu.o",
   "file": "/home/crane/dev/cuda_ops/reduce/reduce_v5_unroll_last_warp.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v6_completely_unroll.cu -o CMakeFiles/reduce_v6_completely_unroll.dir/reduce_v6_completely_unroll.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v6_completely_unroll.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v7_block_num.cu -o CMakeFiles/reduce_v7_block_num.dir/reduce_v7_block_num.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v7_block_num.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/reduce",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v8_shuffle.cu -o CMakeFiles/reduce_v8_shuffle.dir/reduce_v8_shuffle.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v8_shuffle.cu"
 }
 ]

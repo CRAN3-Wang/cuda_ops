@@ -15,7 +15,7 @@ __device__ void warpReduce(volatile float *cache, unsigned int tid)
     cache[tid] += cache[tid + 1];
 }
 
-__global__ void reduce5(float *d_input, float *d_output)
+__global__ void reduce6(float *d_input, float *d_output)
 {
     __shared__ float shared_mem[THREAD_PER_BLOCK];
     unsigned int tid = threadIdx.x;
@@ -24,20 +24,34 @@ __global__ void reduce5(float *d_input, float *d_output)
     shared_mem[tid] = d_input[global_tid] + d_input[global_tid + blockDim.x];
     __syncthreads();
 
-    // Division is not effective, using bit-ops. And we unfold the last loop to reduce the sync time.
-    for (unsigned int i = blockDim.x / 2; i > 32; i >>= 1)
-    {
-        if (tid < i)
-        {
-            shared_mem[tid] += shared_mem[tid + i];
-            __syncthreads();
-        }
+    // Unroll all the iterations by #pragma unroll or manually unroll
+    // for (unsigned int i = blockDim.x / 2; i > 32; i >>= 1)
+    // {
+    //     if (tid < i)
+    //     {
+    //         shared_mem[tid] += shared_mem[tid + i];
+    //         __syncthreads();
+    //     }
+    // }
+
+    if(THREAD_PER_BLOCK >= 512){
+        if(tid < 256) shared_mem[tid] += shared_mem[tid + 256];
+        __syncthreads();
     }
 
-    if (tid < 32)
-        warpReduce(shared_mem, tid);
-    if (tid == 0)
-        d_output[blockIdx.x] = shared_mem[tid];
+    if(THREAD_PER_BLOCK >= 256){
+        if(tid < 128) shared_mem[tid] += shared_mem[tid + 128];
+        __syncthreads();
+    }
+
+    if(THREAD_PER_BLOCK >= 128){
+        if(tid < 64) shared_mem[tid] += shared_mem[tid + 64];
+        __syncthreads();
+    }
+
+    if (tid < 32) warpReduce(shared_mem, tid);
+
+    if (tid == 0) d_output[blockIdx.x] = shared_mem[tid];
 }
 
 bool check(float *output, float *res, int n)
@@ -84,7 +98,7 @@ int main()
 
     dim3 Grid(block_num, 1);
     dim3 Block(THREAD_PER_BLOCK, 1);
-    reduce5<<<Grid, Block>>>(d_input, d_output);
+    reduce6<<<Grid, Block>>>(d_input, d_output);
 
     cudaMemcpy(output, d_output, block_num * sizeof(float), cudaMemcpyDeviceToHost);
 

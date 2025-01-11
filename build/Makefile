@@ -207,6 +207,45 @@ reduce_v5_unroll_last_warp/fast:
 	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build
 .PHONY : reduce_v5_unroll_last_warp/fast
 
+#=============================================================================
+# Target rules for targets named reduce_v6_completely_unroll
+
+# Build rule for target.
+reduce_v6_completely_unroll: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v6_completely_unroll
+.PHONY : reduce_v6_completely_unroll
+
+# fast build rule for target.
+reduce_v6_completely_unroll/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build
+.PHONY : reduce_v6_completely_unroll/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v7_block_num
+
+# Build rule for target.
+reduce_v7_block_num: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v7_block_num
+.PHONY : reduce_v7_block_num
+
+# fast build rule for target.
+reduce_v7_block_num/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/build
+.PHONY : reduce_v7_block_num/fast
+
+#=============================================================================
+# Target rules for targets named reduce_v8_shuffle
+
+# Build rule for target.
+reduce_v8_shuffle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v8_shuffle
+.PHONY : reduce_v8_shuffle
+
+# fast build rule for target.
+reduce_v8_shuffle/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/build
+.PHONY : reduce_v8_shuffle/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +261,9 @@ help:
 	@echo "... reduce_v4_add_during_load_A"
 	@echo "... reduce_v4_add_during_load_B"
 	@echo "... reduce_v5_unroll_last_warp"
+	@echo "... reduce_v6_completely_unroll"
+	@echo "... reduce_v7_block_num"
+	@echo "... reduce_v8_shuffle"
 .PHONY : help
 
 

@@ -85,6 +85,9 @@ reduce/all: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/all
 reduce/all: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/all
 reduce/all: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/all
 reduce/all: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v6_completely_unroll.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v7_block_num.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v8_shuffle.dir/all
 .PHONY : reduce/all
 
 # Recursive "preinstall" directory target.
@@ -99,6 +102,9 @@ reduce/clean: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/clean
 reduce/clean: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/clean
 reduce/clean: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean
 reduce/clean: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v6_completely_unroll.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v7_block_num.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v8_shuffle.dir/clean
 .PHONY : reduce/clean
 
 #=============================================================================
@@ -282,6 +288,84 @@ reduce_v5_unroll_last_warp: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rul
 reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean:
 	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean
 .PHONY : reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v6_completely_unroll.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v6_completely_unroll.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=15,16 "Built target reduce_v6_completely_unroll"
+.PHONY : reduce/CMakeFiles/reduce_v6_completely_unroll.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v6_completely_unroll.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule
+
+# Convenience name for target.
+reduce_v6_completely_unroll: reduce/CMakeFiles/reduce_v6_completely_unroll.dir/rule
+.PHONY : reduce_v6_completely_unroll
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v6_completely_unroll.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v6_completely_unroll.dir/build.make reduce/CMakeFiles/reduce_v6_completely_unroll.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v6_completely_unroll.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v7_block_num.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v7_block_num.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=17,18 "Built target reduce_v7_block_num"
+.PHONY : reduce/CMakeFiles/reduce_v7_block_num.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v7_block_num.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v7_block_num.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v7_block_num.dir/rule
+
+# Convenience name for target.
+reduce_v7_block_num: reduce/CMakeFiles/reduce_v7_block_num.dir/rule
+.PHONY : reduce_v7_block_num
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v7_block_num.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v7_block_num.dir/build.make reduce/CMakeFiles/reduce_v7_block_num.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v7_block_num.dir/clean
+
+#=============================================================================
+# Target rules for target reduce/CMakeFiles/reduce_v8_shuffle.dir
+
+# All Build rule for target.
+reduce/CMakeFiles/reduce_v8_shuffle.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=19,20 "Built target reduce_v8_shuffle"
+.PHONY : reduce/CMakeFiles/reduce_v8_shuffle.dir/all
+
+# Build rule for subdir invocation for target.
+reduce/CMakeFiles/reduce_v8_shuffle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v8_shuffle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
+.PHONY : reduce/CMakeFiles/reduce_v8_shuffle.dir/rule
+
+# Convenience name for target.
+reduce_v8_shuffle: reduce/CMakeFiles/reduce_v8_shuffle.dir/rule
+.PHONY : reduce_v8_shuffle
+
+# clean rule for target.
+reduce/CMakeFiles/reduce_v8_shuffle.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v8_shuffle.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

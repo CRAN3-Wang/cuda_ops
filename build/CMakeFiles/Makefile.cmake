@@ -65,4 +65,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/DependInfo.cmake"
   "reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/DependInfo.cmake"
   "reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/DependInfo.cmake"
+  "reduce/CMakeFiles/reduce_v6_completely_unroll.dir/DependInfo.cmake"
+  "reduce/CMakeFiles/reduce_v7_block_num.dir/DependInfo.cmake"
+  "reduce/CMakeFiles/reduce_v8_shuffle.dir/DependInfo.cmake"
   )
