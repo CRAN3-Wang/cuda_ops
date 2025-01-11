@@ -31,7 +31,7 @@
 },
 {
   "directory": "/home/crane/dev/cuda_ops/build/reduce",
-  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v5_unfold_last_warp.cu -o CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.o",
-  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v5_unfold_last_warp.cu"
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v5_unroll_last_warp.cu -o CMakeFiles/reduce_v5_unroll_last_warp.dir/reduce_v5_unroll_last_warp.cu.o",
+  "file": "/home/crane/dev/cuda_ops/reduce/reduce_v5_unroll_last_warp.cu"
 }
 ]

@@ -201,18 +201,18 @@ reduce_v4_add_during_load_B/fast:
 .PHONY : reduce_v4_add_during_load_B/fast
 
 # Convenience name for target.
-reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
-.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule
 
 # Convenience name for target.
-reduce_v5_unfold_last_warp: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
-.PHONY : reduce_v5_unfold_last_warp
+reduce_v5_unroll_last_warp: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule
+.PHONY : reduce_v5_unroll_last_warp
 
 # fast build rule for target.
-reduce_v5_unfold_last_warp/fast:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build
-.PHONY : reduce_v5_unfold_last_warp/fast
+reduce_v5_unroll_last_warp/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build
+.PHONY : reduce_v5_unroll_last_warp/fast
 
 reduce_v0_global_mem.o: reduce_v0_global_mem.cu.o
 .PHONY : reduce_v0_global_mem.o
@@ -358,29 +358,29 @@ reduce_v4_add_during_load_B.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/build.make reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/reduce_v4_add_during_load_B.cu.s
 .PHONY : reduce_v4_add_during_load_B.cu.s
 
-reduce_v5_unfold_last_warp.o: reduce_v5_unfold_last_warp.cu.o
-.PHONY : reduce_v5_unfold_last_warp.o
+reduce_v5_unroll_last_warp.o: reduce_v5_unroll_last_warp.cu.o
+.PHONY : reduce_v5_unroll_last_warp.o
 
 # target to build an object file
-reduce_v5_unfold_last_warp.cu.o:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.o
-.PHONY : reduce_v5_unfold_last_warp.cu.o
+reduce_v5_unroll_last_warp.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/reduce_v5_unroll_last_warp.cu.o
+.PHONY : reduce_v5_unroll_last_warp.cu.o
 
-reduce_v5_unfold_last_warp.i: reduce_v5_unfold_last_warp.cu.i
-.PHONY : reduce_v5_unfold_last_warp.i
+reduce_v5_unroll_last_warp.i: reduce_v5_unroll_last_warp.cu.i
+.PHONY : reduce_v5_unroll_last_warp.i
 
 # target to preprocess a source file
-reduce_v5_unfold_last_warp.cu.i:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.i
-.PHONY : reduce_v5_unfold_last_warp.cu.i
+reduce_v5_unroll_last_warp.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/reduce_v5_unroll_last_warp.cu.i
+.PHONY : reduce_v5_unroll_last_warp.cu.i
 
-reduce_v5_unfold_last_warp.s: reduce_v5_unfold_last_warp.cu.s
-.PHONY : reduce_v5_unfold_last_warp.s
+reduce_v5_unroll_last_warp.s: reduce_v5_unroll_last_warp.cu.s
+.PHONY : reduce_v5_unroll_last_warp.s
 
 # target to generate assembly for a file
-reduce_v5_unfold_last_warp.cu.s:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/reduce_v5_unfold_last_warp.cu.s
-.PHONY : reduce_v5_unfold_last_warp.cu.s
+reduce_v5_unroll_last_warp.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/reduce_v5_unroll_last_warp.cu.s
+.PHONY : reduce_v5_unroll_last_warp.cu.s
 
 # Help Target
 help:
@@ -396,7 +396,7 @@ help:
 	@echo "... reduce_v3_no_bank_conflict"
 	@echo "... reduce_v4_add_during_load_A"
 	@echo "... reduce_v4_add_during_load_B"
-	@echo "... reduce_v5_unfold_last_warp"
+	@echo "... reduce_v5_unroll_last_warp"
 	@echo "... reduce_v0_global_mem.o"
 	@echo "... reduce_v0_global_mem.i"
 	@echo "... reduce_v0_global_mem.s"
@@ -415,9 +415,9 @@ help:
 	@echo "... reduce_v4_add_during_load_B.o"
 	@echo "... reduce_v4_add_during_load_B.i"
 	@echo "... reduce_v4_add_during_load_B.s"
-	@echo "... reduce_v5_unfold_last_warp.o"
-	@echo "... reduce_v5_unfold_last_warp.i"
-	@echo "... reduce_v5_unfold_last_warp.s"
+	@echo "... reduce_v5_unroll_last_warp.o"
+	@echo "... reduce_v5_unroll_last_warp.i"
+	@echo "... reduce_v5_unroll_last_warp.s"
 .PHONY : help
 
 

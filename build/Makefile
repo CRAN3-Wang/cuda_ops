@@ -195,17 +195,17 @@ reduce_v4_add_during_load_B/fast:
 .PHONY : reduce_v4_add_during_load_B/fast
 
 #=============================================================================
-# Target rules for targets named reduce_v5_unfold_last_warp
+# Target rules for targets named reduce_v5_unroll_last_warp
 
 # Build rule for target.
-reduce_v5_unfold_last_warp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v5_unfold_last_warp
-.PHONY : reduce_v5_unfold_last_warp
+reduce_v5_unroll_last_warp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_v5_unroll_last_warp
+.PHONY : reduce_v5_unroll_last_warp
 
 # fast build rule for target.
-reduce_v5_unfold_last_warp/fast:
-	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build
-.PHONY : reduce_v5_unfold_last_warp/fast
+reduce_v5_unroll_last_warp/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build
+.PHONY : reduce_v5_unroll_last_warp/fast
 
 # Help Target
 help:
@@ -221,7 +221,7 @@ help:
 	@echo "... reduce_v3_no_bank_conflict"
 	@echo "... reduce_v4_add_during_load_A"
 	@echo "... reduce_v4_add_during_load_B"
-	@echo "... reduce_v5_unfold_last_warp"
+	@echo "... reduce_v5_unroll_last_warp"
 .PHONY : help
 
 

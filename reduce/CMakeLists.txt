@@ -42,9 +42,9 @@ if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     target_compile_options(reduce_v4_add_during_load_B PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-G>)
 endif()
 
-add_executable(reduce_v5_unfold_last_warp reduce_v5_unfold_last_warp.cu)
-target_link_libraries(reduce_v5_unfold_last_warp PRIVATE CUDA::cudart ${CUDA_cublas_LIBRARY})
+add_executable(reduce_v5_unroll_last_warp reduce_v5_unroll_last_warp.cu)
+target_link_libraries(reduce_v5_unroll_last_warp PRIVATE CUDA::cudart ${CUDA_cublas_LIBRARY})
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_options(reduce_v5_unfold_last_warp PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-G>)
+    target_compile_options(reduce_v5_unrool_last_warp PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:-G>)
 endif()

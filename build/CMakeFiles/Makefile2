@@ -84,7 +84,7 @@ reduce/all: reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/all
 reduce/all: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/all
 reduce/all: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/all
 reduce/all: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/all
-reduce/all: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all
+reduce/all: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/all
 .PHONY : reduce/all
 
 # Recursive "preinstall" directory target.
@@ -98,7 +98,7 @@ reduce/clean: reduce/CMakeFiles/reduce_v2_no_divergence_branch.dir/clean
 reduce/clean: reduce/CMakeFiles/reduce_v3_no_bank_conflict.dir/clean
 reduce/clean: reduce/CMakeFiles/reduce_v4_add_during_load_A.dir/clean
 reduce/clean: reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean
-reduce/clean: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean
+reduce/clean: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean
 .PHONY : reduce/clean
 
 #=============================================================================
@@ -258,30 +258,30 @@ reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean:
 .PHONY : reduce/CMakeFiles/reduce_v4_add_during_load_B.dir/clean
 
 #=============================================================================
-# Target rules for target reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir
+# Target rules for target reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir
 
 # All Build rule for target.
-reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all:
-	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/depend
-	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=13,14 "Built target reduce_v5_unfold_last_warp"
-.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all
+reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/all:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/depend
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=13,14 "Built target reduce_v5_unroll_last_warp"
+.PHONY : reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/all
 
 # Build rule for subdir invocation for target.
-reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule: cmake_check_build_system
+reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
-.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule
 
 # Convenience name for target.
-reduce_v5_unfold_last_warp: reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/rule
-.PHONY : reduce_v5_unfold_last_warp
+reduce_v5_unroll_last_warp: reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/rule
+.PHONY : reduce_v5_unroll_last_warp
 
 # clean rule for target.
-reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean
-.PHONY : reduce/CMakeFiles/reduce_v5_unfold_last_warp.dir/clean
+reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/build.make reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean
+.PHONY : reduce/CMakeFiles/reduce_v5_unroll_last_warp.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

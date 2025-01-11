@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "reduce/reduce_v5_unfold_last_warp"
+			"path" : "reduce/reduce_v5_unroll_last_warp"
 		}
 	],
 	"backtrace" : 1,
@@ -68,7 +68,7 @@
 			]
 		}
 	],
-	"id" : "reduce_v5_unfold_last_warp::@bc9193bc7089a07bb2a9",
+	"id" : "reduce_v5_unroll_last_warp::@bc9193bc7089a07bb2a9",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -114,8 +114,8 @@
 		],
 		"language" : "CUDA"
 	},
-	"name" : "reduce_v5_unfold_last_warp",
-	"nameOnDisk" : "reduce_v5_unfold_last_warp",
+	"name" : "reduce_v5_unroll_last_warp",
+	"nameOnDisk" : "reduce_v5_unroll_last_warp",
 	"paths" : 
 	{
 		"build" : "reduce",
@@ -136,7 +136,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "reduce/reduce_v5_unfold_last_warp.cu",
+			"path" : "reduce/reduce_v5_unroll_last_warp.cu",
 			"sourceGroupIndex" : 0
 		}
 	],

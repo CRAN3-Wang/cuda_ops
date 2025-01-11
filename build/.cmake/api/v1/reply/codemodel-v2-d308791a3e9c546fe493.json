@@ -108,9 +108,9 @@
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "reduce_v5_unfold_last_warp::@bc9193bc7089a07bb2a9",
-					"jsonFile" : "target-reduce_v5_unfold_last_warp-Release-15d3ebb9aaf1e67d91ea.json",
-					"name" : "reduce_v5_unfold_last_warp",
+					"id" : "reduce_v5_unroll_last_warp::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v5_unroll_last_warp-Release-8a1f8582bb4006d9ae0d.json",
+					"name" : "reduce_v5_unroll_last_warp",
 					"projectIndex" : 0
 				}
 			]
