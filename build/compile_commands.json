@@ -48,5 +48,10 @@
   "directory": "/home/crane/dev/cuda_ops/build/reduce",
   "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/reduce/reduce_v8_shuffle.cu -o CMakeFiles/reduce_v8_shuffle.dir/reduce_v8_shuffle.cu.o",
   "file": "/home/crane/dev/cuda_ops/reduce/reduce_v8_shuffle.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/ncu_profile",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -lineinfo -x cu -c /home/crane/dev/cuda_ops/ncu_profile/combined_access.cu -o CMakeFiles/combined_access.dir/combined_access.cu.o",
+  "file": "/home/crane/dev/cuda_ops/ncu_profile/combined_access.cu"
 }
 ]

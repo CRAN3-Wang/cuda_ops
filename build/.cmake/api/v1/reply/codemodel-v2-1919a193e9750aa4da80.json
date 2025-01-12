@@ -8,7 +8,8 @@
 					"build" : ".",
 					"childIndexes" : 
 					[
-						1
+						1,
+						2
 					],
 					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -30,7 +31,6 @@
 					"source" : "reduce",
 					"targetIndexes" : 
 					[
-						0,
 						1,
 						2,
 						3,
@@ -39,7 +39,23 @@
 						6,
 						7,
 						8,
-						9
+						9,
+						10
+					]
+				},
+				{
+					"build" : "ncu_profile",
+					"jsonFile" : "directory-ncu_profile-Release-918849d111af3158fa5a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ncu_profile",
+					"targetIndexes" : 
+					[
+						0
 					]
 				}
 			],
@@ -50,7 +66,8 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "CUDA_OPS",
 					"targetIndexes" : 
@@ -64,12 +81,20 @@
 						6,
 						7,
 						8,
-						9
+						9,
+						10
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 2,
+					"id" : "combined_access::@b4084ddbe901d460b1c4",
+					"jsonFile" : "target-combined_access-Release-1da03f75abeee7bf7cbc.json",
+					"name" : "combined_access",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 1,
 					"id" : "reduce_v0_global_mem::@bc9193bc7089a07bb2a9",

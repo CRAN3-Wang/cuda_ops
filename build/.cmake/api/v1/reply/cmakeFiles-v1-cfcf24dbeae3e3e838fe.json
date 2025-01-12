@@ -247,6 +247,9 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "ncu_profile/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

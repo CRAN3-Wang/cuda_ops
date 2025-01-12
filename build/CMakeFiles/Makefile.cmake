@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
+  "../ncu_profile/CMakeLists.txt"
   "../reduce/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake"
@@ -54,6 +55,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "reduce/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "ncu_profile/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -68,4 +70,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "reduce/CMakeFiles/reduce_v6_completely_unroll.dir/DependInfo.cmake"
   "reduce/CMakeFiles/reduce_v7_block_num.dir/DependInfo.cmake"
   "reduce/CMakeFiles/reduce_v8_shuffle.dir/DependInfo.cmake"
+  "ncu_profile/CMakeFiles/combined_access.dir/DependInfo.cmake"
   )

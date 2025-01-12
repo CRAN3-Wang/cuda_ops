@@ -246,6 +246,19 @@ reduce_v8_shuffle/fast:
 	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/build
 .PHONY : reduce_v8_shuffle/fast
 
+#=============================================================================
+# Target rules for targets named combined_access
+
+# Build rule for target.
+combined_access: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 combined_access
+.PHONY : combined_access
+
+# fast build rule for target.
+combined_access/fast:
+	$(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/combined_access.dir/build.make ncu_profile/CMakeFiles/combined_access.dir/build
+.PHONY : combined_access/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -254,6 +267,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... combined_access"
 	@echo "... reduce_v0_global_mem"
 	@echo "... reduce_v1_shared_mem"
 	@echo "... reduce_v2_no_divergence_branch"
