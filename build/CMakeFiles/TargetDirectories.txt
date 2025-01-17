@@ -17,3 +17,6 @@
 /home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/transpose.dir
 /home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/edit_cache.dir
 /home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/rebuild_cache.dir
+/home/crane/dev/cuda_ops/build/sgemm/CMakeFiles/sgemm.dir
+/home/crane/dev/cuda_ops/build/sgemm/CMakeFiles/edit_cache.dir
+/home/crane/dev/cuda_ops/build/sgemm/CMakeFiles/rebuild_cache.dir

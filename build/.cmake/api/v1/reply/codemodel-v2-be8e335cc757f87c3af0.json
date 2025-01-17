@@ -9,7 +9,8 @@
 					"childIndexes" : 
 					[
 						1,
-						2
+						2,
+						3
 					],
 					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
@@ -57,6 +58,21 @@
 					"targetIndexes" : 
 					[
 						0,
+						13
+					]
+				},
+				{
+					"build" : "sgemm",
+					"jsonFile" : "directory-sgemm-Release-dae79e1542f79b8af678.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "sgemm",
+					"targetIndexes" : 
+					[
 						12
 					]
 				}
@@ -69,7 +85,8 @@
 					[
 						0,
 						1,
-						2
+						2,
+						3
 					],
 					"name" : "CUDA_OPS",
 					"targetIndexes" : 
@@ -86,7 +103,8 @@
 						9,
 						10,
 						11,
-						12
+						12,
+						13
 					]
 				}
 			],
@@ -174,6 +192,13 @@
 					"id" : "reduce_v8_shuffle::@bc9193bc7089a07bb2a9",
 					"jsonFile" : "target-reduce_v8_shuffle-Release-d68a70d446a731f15a84.json",
 					"name" : "reduce_v8_shuffle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "sgemm::@276bdf204a6a8cb1b010",
+					"jsonFile" : "target-sgemm-Release-4e4519101ca20ce60047.json",
+					"name" : "sgemm",
 					"projectIndex" : 0
 				},
 				{

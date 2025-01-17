@@ -285,6 +285,19 @@ transpose/fast:
 	$(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/build
 .PHONY : transpose/fast
 
+#=============================================================================
+# Target rules for targets named sgemm
+
+# Build rule for target.
+sgemm: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sgemm
+.PHONY : sgemm
+
+# fast build rule for target.
+sgemm/fast:
+	$(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/build
+.PHONY : sgemm/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -305,6 +318,7 @@ help:
 	@echo "... reduce_v6_completely_unroll"
 	@echo "... reduce_v7_block_num"
 	@echo "... reduce_v8_shuffle"
+	@echo "... sgemm"
 	@echo "... transpose"
 .PHONY : help
 
