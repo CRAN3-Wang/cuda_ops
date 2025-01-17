@@ -10,8 +10,10 @@
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v6_completely_unroll.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v7_block_num.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_v8_shuffle.dir
+/home/crane/dev/cuda_ops/build/reduce/CMakeFiles/reduce_compare.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/edit_cache.dir
 /home/crane/dev/cuda_ops/build/reduce/CMakeFiles/rebuild_cache.dir
 /home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/combined_access.dir
+/home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/transpose.dir
 /home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/edit_cache.dir
 /home/crane/dev/cuda_ops/build/ncu_profile/CMakeFiles/rebuild_cache.dir

@@ -247,6 +247,19 @@ reduce_v8_shuffle/fast:
 .PHONY : reduce_v8_shuffle/fast
 
 #=============================================================================
+# Target rules for targets named reduce_compare
+
+# Build rule for target.
+reduce_compare: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce_compare
+.PHONY : reduce_compare
+
+# fast build rule for target.
+reduce_compare/fast:
+	$(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_compare.dir/build.make reduce/CMakeFiles/reduce_compare.dir/build
+.PHONY : reduce_compare/fast
+
+#=============================================================================
 # Target rules for targets named combined_access
 
 # Build rule for target.
@@ -259,6 +272,19 @@ combined_access/fast:
 	$(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/combined_access.dir/build.make ncu_profile/CMakeFiles/combined_access.dir/build
 .PHONY : combined_access/fast
 
+#=============================================================================
+# Target rules for targets named transpose
+
+# Build rule for target.
+transpose: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transpose
+.PHONY : transpose
+
+# fast build rule for target.
+transpose/fast:
+	$(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/build
+.PHONY : transpose/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -268,6 +294,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... combined_access"
+	@echo "... reduce_compare"
 	@echo "... reduce_v0_global_mem"
 	@echo "... reduce_v1_shared_mem"
 	@echo "... reduce_v2_no_divergence_branch"
@@ -278,6 +305,7 @@ help:
 	@echo "... reduce_v6_completely_unroll"
 	@echo "... reduce_v7_block_num"
 	@echo "... reduce_v8_shuffle"
+	@echo "... transpose"
 .PHONY : help
 
 

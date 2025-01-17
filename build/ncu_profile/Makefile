@@ -130,6 +130,20 @@ combined_access/fast:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/combined_access.dir/build.make ncu_profile/CMakeFiles/combined_access.dir/build
 .PHONY : combined_access/fast
 
+# Convenience name for target.
+ncu_profile/CMakeFiles/transpose.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ncu_profile/CMakeFiles/transpose.dir/rule
+.PHONY : ncu_profile/CMakeFiles/transpose.dir/rule
+
+# Convenience name for target.
+transpose: ncu_profile/CMakeFiles/transpose.dir/rule
+.PHONY : transpose
+
+# fast build rule for target.
+transpose/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/build
+.PHONY : transpose/fast
+
 combined_access.o: combined_access.cu.o
 .PHONY : combined_access.o
 
@@ -154,6 +168,30 @@ combined_access.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/combined_access.dir/build.make ncu_profile/CMakeFiles/combined_access.dir/combined_access.cu.s
 .PHONY : combined_access.cu.s
 
+transpose.o: transpose.cu.o
+.PHONY : transpose.o
+
+# target to build an object file
+transpose.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/transpose.cu.o
+.PHONY : transpose.cu.o
+
+transpose.i: transpose.cu.i
+.PHONY : transpose.i
+
+# target to preprocess a source file
+transpose.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/transpose.cu.i
+.PHONY : transpose.cu.i
+
+transpose.s: transpose.cu.s
+.PHONY : transpose.s
+
+# target to generate assembly for a file
+transpose.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/transpose.cu.s
+.PHONY : transpose.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -163,9 +201,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... combined_access"
+	@echo "... transpose"
 	@echo "... combined_access.o"
 	@echo "... combined_access.i"
 	@echo "... combined_access.s"
+	@echo "... transpose.o"
+	@echo "... transpose.i"
+	@echo "... transpose.s"
 .PHONY : help
 
 

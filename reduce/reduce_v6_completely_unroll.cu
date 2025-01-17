@@ -7,12 +7,18 @@
 
 __device__ void warpReduce(volatile float *cache, unsigned int tid)
 {
-    cache[tid] += cache[tid + 32];
-    cache[tid] += cache[tid + 16];
-    cache[tid] += cache[tid + 8];
-    cache[tid] += cache[tid + 4];
-    cache[tid] += cache[tid + 2];
-    cache[tid] += cache[tid + 1];
+    if (THREAD_PER_BLOCK > 64)
+        cache[tid] += cache[tid + 32];
+    if (THREAD_PER_BLOCK > 32)
+        cache[tid] += cache[tid + 16];
+    if (THREAD_PER_BLOCK > 16)
+        cache[tid] += cache[tid + 8];
+    if (THREAD_PER_BLOCK > 8)
+        cache[tid] += cache[tid + 4];
+    if (THREAD_PER_BLOCK > 4)
+        cache[tid] += cache[tid + 2];
+    if (THREAD_PER_BLOCK > 2)
+        cache[tid] += cache[tid + 1];
 }
 
 __global__ void reduce6(float *d_input, float *d_output)
@@ -34,24 +40,32 @@ __global__ void reduce6(float *d_input, float *d_output)
     //     }
     // }
 
-    if(THREAD_PER_BLOCK >= 512){
-        if(tid < 256) shared_mem[tid] += shared_mem[tid + 256];
+    if (THREAD_PER_BLOCK >= 512)
+    {
+        if (tid < 256)
+            shared_mem[tid] += shared_mem[tid + 256];
         __syncthreads();
     }
 
-    if(THREAD_PER_BLOCK >= 256){
-        if(tid < 128) shared_mem[tid] += shared_mem[tid + 128];
+    if (THREAD_PER_BLOCK >= 256)
+    {
+        if (tid < 128)
+            shared_mem[tid] += shared_mem[tid + 128];
         __syncthreads();
     }
 
-    if(THREAD_PER_BLOCK >= 128){
-        if(tid < 64) shared_mem[tid] += shared_mem[tid + 64];
+    if (THREAD_PER_BLOCK >= 128)
+    {
+        if (tid < 64)
+            shared_mem[tid] += shared_mem[tid + 64];
         __syncthreads();
     }
 
-    if (tid < 32) warpReduce(shared_mem, tid);
+    if (tid < 32)
+        warpReduce(shared_mem, tid);
 
-    if (tid == 0) d_output[blockIdx.x] = shared_mem[tid];
+    if (tid == 0)
+        d_output[blockIdx.x] = shared_mem[tid];
 }
 
 bool check(float *output, float *res, int n)

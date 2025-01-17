@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <cuda_runtime.h>
 
-#define THREAD_PER_BLOCK 256
+#define THREAD_PER_BLOCK (256)
 
 __global__ void reduce0(float *d_input, float *d_output)
 {

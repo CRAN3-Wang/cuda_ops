@@ -1,0 +1,200 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Release-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "reduce",
+					"jsonFile" : "directory-reduce-Release-8cf85c37ff150e700a51.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "reduce",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				},
+				{
+					"build" : "ncu_profile",
+					"jsonFile" : "directory-ncu_profile-Release-918849d111af3158fa5a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "ncu_profile",
+					"targetIndexes" : 
+					[
+						0,
+						12
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "CUDA_OPS",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "combined_access::@b4084ddbe901d460b1c4",
+					"jsonFile" : "target-combined_access-Release-1da03f75abeee7bf7cbc.json",
+					"name" : "combined_access",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_compare::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_compare-Release-8dbe6174b09314a7aa94.json",
+					"name" : "reduce_compare",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v0_global_mem::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v0_global_mem-Release-351c8048283a0ee36982.json",
+					"name" : "reduce_v0_global_mem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v1_shared_mem::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v1_shared_mem-Release-3acfab8ac291c37421ad.json",
+					"name" : "reduce_v1_shared_mem",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v2_no_divergence_branch::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v2_no_divergence_branch-Release-1896893fe8965bc64b5a.json",
+					"name" : "reduce_v2_no_divergence_branch",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v3_no_bank_conflict::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v3_no_bank_conflict-Release-7b7d2742d9a626de8e98.json",
+					"name" : "reduce_v3_no_bank_conflict",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v4_add_during_load_A::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v4_add_during_load_A-Release-9cf1972f3946a42d78d9.json",
+					"name" : "reduce_v4_add_during_load_A",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v4_add_during_load_B::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v4_add_during_load_B-Release-80baf5ca502db5fb6fea.json",
+					"name" : "reduce_v4_add_during_load_B",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v5_unroll_last_warp::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v5_unroll_last_warp-Release-8a1f8582bb4006d9ae0d.json",
+					"name" : "reduce_v5_unroll_last_warp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v6_completely_unroll::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v6_completely_unroll-Release-92f10ac67dfe16c9fe5f.json",
+					"name" : "reduce_v6_completely_unroll",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v7_block_num::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v7_block_num-Release-e2910683d339813ea6b1.json",
+					"name" : "reduce_v7_block_num",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "reduce_v8_shuffle::@bc9193bc7089a07bb2a9",
+					"jsonFile" : "target-reduce_v8_shuffle-Release-d68a70d446a731f15a84.json",
+					"name" : "reduce_v8_shuffle",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "transpose::@b4084ddbe901d460b1c4",
+					"jsonFile" : "target-transpose-Release-23dc6482677f4fb7177b.json",
+					"name" : "transpose",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/crane/dev/cuda_ops/build",
+		"source" : "/home/crane/dev/cuda_ops"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

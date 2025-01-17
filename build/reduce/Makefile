@@ -256,6 +256,44 @@ reduce_v8_shuffle/fast:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_v8_shuffle.dir/build.make reduce/CMakeFiles/reduce_v8_shuffle.dir/build
 .PHONY : reduce_v8_shuffle/fast
 
+# Convenience name for target.
+reduce/CMakeFiles/reduce_compare.dir/rule:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 reduce/CMakeFiles/reduce_compare.dir/rule
+.PHONY : reduce/CMakeFiles/reduce_compare.dir/rule
+
+# Convenience name for target.
+reduce_compare: reduce/CMakeFiles/reduce_compare.dir/rule
+.PHONY : reduce_compare
+
+# fast build rule for target.
+reduce_compare/fast:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_compare.dir/build.make reduce/CMakeFiles/reduce_compare.dir/build
+.PHONY : reduce_compare/fast
+
+reduce_compare.o: reduce_compare.cu.o
+.PHONY : reduce_compare.o
+
+# target to build an object file
+reduce_compare.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_compare.dir/build.make reduce/CMakeFiles/reduce_compare.dir/reduce_compare.cu.o
+.PHONY : reduce_compare.cu.o
+
+reduce_compare.i: reduce_compare.cu.i
+.PHONY : reduce_compare.i
+
+# target to preprocess a source file
+reduce_compare.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_compare.dir/build.make reduce/CMakeFiles/reduce_compare.dir/reduce_compare.cu.i
+.PHONY : reduce_compare.cu.i
+
+reduce_compare.s: reduce_compare.cu.s
+.PHONY : reduce_compare.s
+
+# target to generate assembly for a file
+reduce_compare.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f reduce/CMakeFiles/reduce_compare.dir/build.make reduce/CMakeFiles/reduce_compare.dir/reduce_compare.cu.s
+.PHONY : reduce_compare.cu.s
+
 reduce_v0_global_mem.o: reduce_v0_global_mem.cu.o
 .PHONY : reduce_v0_global_mem.o
 
@@ -504,6 +542,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... reduce_compare"
 	@echo "... reduce_v0_global_mem"
 	@echo "... reduce_v1_shared_mem"
 	@echo "... reduce_v2_no_divergence_branch"
@@ -514,6 +553,9 @@ help:
 	@echo "... reduce_v6_completely_unroll"
 	@echo "... reduce_v7_block_num"
 	@echo "... reduce_v8_shuffle"
+	@echo "... reduce_compare.o"
+	@echo "... reduce_compare.i"
+	@echo "... reduce_compare.s"
 	@echo "... reduce_v0_global_mem.o"
 	@echo "... reduce_v0_global_mem.i"
 	@echo "... reduce_v0_global_mem.s"

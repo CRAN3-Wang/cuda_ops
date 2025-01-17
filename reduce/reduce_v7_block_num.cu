@@ -77,8 +77,7 @@ int main()
     float *d_input;
     // Use cudaMalloc to alloc memory on gpu. Using double ptr for DIRECTLY modify the original d_input(make this address to point to the alloc'd gpu mem) more or less like using inference.
     cudaMalloc((void **)&d_input, N * sizeof(float));
-
-    // We will add one epoch when loading, consequently the block num reduced by half.
+    
     constexpr unsigned int block_num = 1024;
     constexpr unsigned int NUM_PER_BLOCK = N / block_num;
     constexpr unsigned int NUM_PER_THREAD = NUM_PER_BLOCK / THREAD_PER_BLOCK;

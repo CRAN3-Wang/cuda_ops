@@ -70,5 +70,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "reduce/CMakeFiles/reduce_v6_completely_unroll.dir/DependInfo.cmake"
   "reduce/CMakeFiles/reduce_v7_block_num.dir/DependInfo.cmake"
   "reduce/CMakeFiles/reduce_v8_shuffle.dir/DependInfo.cmake"
+  "reduce/CMakeFiles/reduce_compare.dir/DependInfo.cmake"
   "ncu_profile/CMakeFiles/combined_access.dir/DependInfo.cmake"
+  "ncu_profile/CMakeFiles/transpose.dir/DependInfo.cmake"
   )

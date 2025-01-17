@@ -23,7 +23,7 @@ __device__ __forceinline__ float warpReduce(float sum)
 }
 
 template <unsigned int NUM_PER_THREAD>
-__global__ void reduce7(float *d_input, float *d_output)
+__global__ void reduce8(float *d_input, float *d_output)
 {
     float sum = 0;
     unsigned int tid = threadIdx.x;
@@ -109,7 +109,7 @@ int main()
 
     dim3 Grid(block_num, 1);
     dim3 Block(THREAD_PER_BLOCK, 1);
-    reduce7<NUM_PER_THREAD><<<Grid, Block>>>(d_input, d_output);
+    reduce8<NUM_PER_THREAD><<<Grid, Block>>>(d_input, d_output);
 
     cudaMemcpy(output, d_output, block_num * sizeof(float), cudaMemcpyDeviceToHost);
 
