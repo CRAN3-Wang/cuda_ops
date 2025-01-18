@@ -1,8 +1,12 @@
 find_package(BLAS REQUIRED)
 
-add_executable(sgemm src/sgemm.cu src/sgemm_v0_global_mem.cu src/utils.cpp)
+add_executable(sgemm src/sgemm.cu 
+                src/sgemm_v0_global_mem.cu 
+                src/sgemm_v1_shared_mem.cu 
+                src/sgemm_v2_increase_workload_of_threads.cu 
+                src/utils.cpp)
 
-target_include_directories(sgemm PRIVATE ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(sgemm PRIVATE ${CMAKE_SOURCE_DIR}/sgemm/include)
 
 target_link_libraries(sgemm PRIVATE ${BLAS_LIBRARIES})
 target_link_libraries(sgemm PRIVATE CUDA::cudart ${CUDA_cublas_LIBRARY})

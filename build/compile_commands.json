@@ -66,17 +66,27 @@
 },
 {
   "directory": "/home/crane/dev/cuda_ops/build/sgemm",
-  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/include -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm.cu -o CMakeFiles/sgemm.dir/src/sgemm.cu.o",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemm/include -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm.cu -o CMakeFiles/sgemm.dir/src/sgemm.cu.o",
   "file": "/home/crane/dev/cuda_ops/sgemm/src/sgemm.cu"
 },
 {
   "directory": "/home/crane/dev/cuda_ops/build/sgemm",
-  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/include -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_v0_global_mem.cu -o CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.o",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemm/include -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_v0_global_mem.cu -o CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.o",
   "file": "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v0_global_mem.cu"
 },
 {
   "directory": "/home/crane/dev/cuda_ops/build/sgemm",
-  "command": "/usr/bin/g++  -I/home/crane/dev/cuda_ops/include -isystem /usr/local/cuda/include -O3 -DNDEBUG -o CMakeFiles/sgemm.dir/src/utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/utils.cpp",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemm/include -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_v1_shared_mem.cu -o CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o",
+  "file": "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v1_shared_mem.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemm",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemm/include -isystem=/usr/local/cuda/include -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52] -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_v2_increase_workload_of_threads.cu -o CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o",
+  "file": "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v2_increase_workload_of_threads.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemm",
+  "command": "/usr/bin/g++  -I/home/crane/dev/cuda_ops/sgemm/include -isystem /usr/local/cuda/include -O3 -DNDEBUG -o CMakeFiles/sgemm.dir/src/utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/utils.cpp",
   "file": "/home/crane/dev/cuda_ops/sgemm/src/utils.cpp"
 }
 ]

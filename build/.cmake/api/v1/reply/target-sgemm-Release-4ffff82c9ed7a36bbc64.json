@@ -32,19 +32,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 7,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 8,
+				"line" : 12,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 5,
+				"line" : 9,
 				"parent" : 0
 			}
 		]
@@ -62,7 +62,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/home/crane/dev/cuda_ops/include"
+					"path" : "/home/crane/dev/cuda_ops/sgemm/include"
 				},
 				{
 					"backtrace" : 3,
@@ -82,7 +82,9 @@
 			"sourceIndexes" : 
 			[
 				0,
-				1
+				1,
+				2,
+				3
 			]
 		},
 		{
@@ -96,7 +98,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/home/crane/dev/cuda_ops/include"
+					"path" : "/home/crane/dev/cuda_ops/sgemm/include"
 				},
 				{
 					"backtrace" : 3,
@@ -107,7 +109,7 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				2
+				4
 			]
 		}
 	],
@@ -189,7 +191,9 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4
 			]
 		}
 	],
@@ -205,6 +209,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "sgemm/src/sgemm_v0_global_mem.cu",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sgemm/src/sgemm_v1_shared_mem.cu",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "sgemm/src/sgemm_v2_increase_workload_of_threads.cu",
 			"sourceGroupIndex" : 0
 		},
 		{
