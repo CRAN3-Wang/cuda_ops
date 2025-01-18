@@ -7,11 +7,11 @@ CUDA_DEFINES =
 
 CUDA_INCLUDES = -I/home/crane/dev/cuda_ops/sgemm/include -isystem=/usr/local/cuda/include
 
-CUDA_FLAGS = -O3 -DNDEBUG --generate-code=arch=compute_52,code=[compute_52,sm_52]
+CUDA_FLAGS = -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G
 
 CXX_DEFINES = 
 
 CXX_INCLUDES = -I/home/crane/dev/cuda_ops/sgemm/include -isystem /usr/local/cuda/include
 
-CXX_FLAGS = -O3 -DNDEBUG
+CXX_FLAGS = -g
 

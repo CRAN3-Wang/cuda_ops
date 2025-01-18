@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o.d"
   "CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o"
   "CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o.d"
+  "CMakeFiles/sgemm.dir/src/sgemm_v3_float4.cu.o"
+  "CMakeFiles/sgemm.dir/src/sgemm_v3_float4.cu.o.d"
   "CMakeFiles/sgemm.dir/src/utils.cpp.o"
   "CMakeFiles/sgemm.dir/src/utils.cpp.o.d"
   "sgemm"

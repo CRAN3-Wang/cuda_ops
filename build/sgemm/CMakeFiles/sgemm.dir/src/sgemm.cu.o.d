@@ -67,7 +67,6 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
-    /usr/include/x86_64-linux-gnu/bits/select2.h \
     /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
     /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
     /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -75,9 +74,7 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
     /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
     /usr/include/alloca.h \
-    /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
     /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-    /usr/include/x86_64-linux-gnu/bits/stdlib.h \
     /usr/include/c++/11/bits/std_abs.h \
     /usr/local/cuda-12.4/include/driver_functions.h \
     /usr/local/cuda-12.4/include/vector_functions.h \
@@ -85,8 +82,6 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /usr/local/cuda-12.4/include/crt/common_functions.h \
     /usr/include/string.h \
     /usr/include/strings.h \
-    /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
-    /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
     /usr/include/time.h \
     /usr/include/x86_64-linux-gnu/bits/time.h \
     /usr/include/x86_64-linux-gnu/bits/timex.h \
@@ -104,8 +99,6 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
     /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
     /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-    /usr/include/x86_64-linux-gnu/bits/stdio.h \
-    /usr/include/x86_64-linux-gnu/bits/stdio2.h \
     /usr/include/assert.h \
     /usr/local/cuda-12.4/include/crt/math_functions.h \
     /usr/include/c++/11/math.h \
@@ -191,6 +184,7 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /home/crane/dev/cuda_ops/sgemm/include/sgemm_v0_global_mem.cuh \
     /home/crane/dev/cuda_ops/sgemm/include/sgemm_v1_shared_mem.cuh \
     /home/crane/dev/cuda_ops/sgemm/include/sgemm_v2_increase_workload_of_threads.cuh \
+    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v3_float4.cuh \
     /usr/include/c++/11/cstdio \
     /usr/local/cuda-12.4/include/cuda.h \
     /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \

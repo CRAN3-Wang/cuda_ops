@@ -2,6 +2,7 @@
 #include "sgemm_v0_global_mem.cuh"
 #include "sgemm_v1_shared_mem.cuh"
 #include "sgemm_v2_increase_workload_of_threads.cuh"
+#include "sgemm_v3_float4.cuh"
 #include <cstdio>
 #include <cuda.h>
 #include <stdlib.h>
@@ -31,24 +32,33 @@ int main()
     cpu_sgemm(h_A, h_B, h_C_h, m, n, k);
 
     float *d_A, *d_B, *d_C;
-    cudaMalloc((void**)&d_A, memsize_A);
-    cudaMalloc((void**)&d_B, memsize_B);
-    cudaMalloc((void**)&d_C, memsize_C);
+    cudaMalloc((void **)&d_A, memsize_A);
+    cudaMalloc((void **)&d_B, memsize_B);
+    cudaMalloc((void **)&d_C, memsize_C);
 
     cudaMemcpy(d_A, h_A, memsize_A, cudaMemcpyHostToDevice);
     cudaMemcpy(d_B, h_B, memsize_B, cudaMemcpyHostToDevice);
 
-    dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
-    dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK);
+    // {
+    //     dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
+    //     dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK);
 
-    // sgemm0<<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    // sgemm1<THREAD_PER_BLOCK><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    //     sgemm0<<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    //     sgemm1<THREAD_PER_BLOCK><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    // }
 
-    Grid.x /= STRIDE;
-    Grid.y /= STRIDE;
-    sgemm2<THREAD_PER_BLOCK, STRIDE><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    // {
+    //     dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
+    //     dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK / STRIDE, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK / STRIDE);
+    //     sgemm2<THREAD_PER_BLOCK, STRIDE><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    // }
 
-    cudaMemcpy(h_C_d, d_C, memsize_C, cudaMemcpyDeviceToHost);
+    {
+        dim3 Block(8, 32);
+        dim3 Grid(m / 32, n / 32);
+        sgemm3<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+        cudaMemcpy(h_C_d, d_C, memsize_C, cudaMemcpyDeviceToHost);
+    }
 
     check(h_C_d, h_C_h, m, n);
 

@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v0_global_mem.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.o.d"
   "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v1_shared_mem.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o.d"
   "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v2_increase_workload_of_threads.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o.d"
+  "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v3_float4.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v3_float4.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v3_float4.cu.o.d"
   "/home/crane/dev/cuda_ops/sgemm/src/utils.cpp" "sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o.d"
   )
 

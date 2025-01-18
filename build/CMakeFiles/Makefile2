@@ -466,7 +466,7 @@ ncu_profile/CMakeFiles/combined_access.dir/clean:
 ncu_profile/CMakeFiles/transpose.dir/all:
 	$(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/depend
 	$(MAKE) $(MAKESILENT) -f ncu_profile/CMakeFiles/transpose.dir/build.make ncu_profile/CMakeFiles/transpose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=31,32 "Built target transpose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=32,33 "Built target transpose"
 .PHONY : ncu_profile/CMakeFiles/transpose.dir/all
 
 # Build rule for subdir invocation for target.
@@ -492,12 +492,12 @@ ncu_profile/CMakeFiles/transpose.dir/clean:
 sgemm/CMakeFiles/sgemm.dir/all:
 	$(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/depend
 	$(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=25,26,27,28,29,30 "Built target sgemm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=25,26,27,28,29,30,31 "Built target sgemm"
 .PHONY : sgemm/CMakeFiles/sgemm.dir/all
 
 # Build rule for subdir invocation for target.
 sgemm/CMakeFiles/sgemm.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sgemm/CMakeFiles/sgemm.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/crane/dev/cuda_ops/build/CMakeFiles 0
 .PHONY : sgemm/CMakeFiles/sgemm.dir/rule
