@@ -178,6 +178,54 @@ src/sgemm_v0_global_mem.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.s
 .PHONY : src/sgemm_v0_global_mem.cu.s
 
+src/sgemm_v1_shared_mem.o: src/sgemm_v1_shared_mem.cu.o
+.PHONY : src/sgemm_v1_shared_mem.o
+
+# target to build an object file
+src/sgemm_v1_shared_mem.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o
+.PHONY : src/sgemm_v1_shared_mem.cu.o
+
+src/sgemm_v1_shared_mem.i: src/sgemm_v1_shared_mem.cu.i
+.PHONY : src/sgemm_v1_shared_mem.i
+
+# target to preprocess a source file
+src/sgemm_v1_shared_mem.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.i
+.PHONY : src/sgemm_v1_shared_mem.cu.i
+
+src/sgemm_v1_shared_mem.s: src/sgemm_v1_shared_mem.cu.s
+.PHONY : src/sgemm_v1_shared_mem.s
+
+# target to generate assembly for a file
+src/sgemm_v1_shared_mem.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.s
+.PHONY : src/sgemm_v1_shared_mem.cu.s
+
+src/sgemm_v2_increase_workload_of_threads.o: src/sgemm_v2_increase_workload_of_threads.cu.o
+.PHONY : src/sgemm_v2_increase_workload_of_threads.o
+
+# target to build an object file
+src/sgemm_v2_increase_workload_of_threads.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o
+.PHONY : src/sgemm_v2_increase_workload_of_threads.cu.o
+
+src/sgemm_v2_increase_workload_of_threads.i: src/sgemm_v2_increase_workload_of_threads.cu.i
+.PHONY : src/sgemm_v2_increase_workload_of_threads.i
+
+# target to preprocess a source file
+src/sgemm_v2_increase_workload_of_threads.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.i
+.PHONY : src/sgemm_v2_increase_workload_of_threads.cu.i
+
+src/sgemm_v2_increase_workload_of_threads.s: src/sgemm_v2_increase_workload_of_threads.cu.s
+.PHONY : src/sgemm_v2_increase_workload_of_threads.s
+
+# target to generate assembly for a file
+src/sgemm_v2_increase_workload_of_threads.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.s
+.PHONY : src/sgemm_v2_increase_workload_of_threads.cu.s
+
 src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
 
@@ -217,6 +265,12 @@ help:
 	@echo "... src/sgemm_v0_global_mem.o"
 	@echo "... src/sgemm_v0_global_mem.i"
 	@echo "... src/sgemm_v0_global_mem.s"
+	@echo "... src/sgemm_v1_shared_mem.o"
+	@echo "... src/sgemm_v1_shared_mem.i"
+	@echo "... src/sgemm_v1_shared_mem.s"
+	@echo "... src/sgemm_v2_increase_workload_of_threads.o"
+	@echo "... src/sgemm_v2_increase_workload_of_threads.i"
+	@echo "... src/sgemm_v2_increase_workload_of_threads.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

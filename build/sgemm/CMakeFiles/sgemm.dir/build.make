@@ -97,10 +97,38 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o: sgemm/CMakeFiles/sgemm.dir/flags.make
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o: ../sgemm/src/sgemm_v1_shared_mem.cu
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o: sgemm/CMakeFiles/sgemm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CUDA object sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o"
+	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o -MF CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o.d -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_v1_shared_mem.cu -o CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o
+
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o: sgemm/CMakeFiles/sgemm.dir/flags.make
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o: ../sgemm/src/sgemm_v2_increase_workload_of_threads.cu
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o: sgemm/CMakeFiles/sgemm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CUDA object sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o"
+	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o -MF CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o.d -x cu -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_v2_increase_workload_of_threads.cu -o CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o
+
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CUDA source to CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o: sgemm/CMakeFiles/sgemm.dir/flags.make
 sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o: ../sgemm/src/utils.cpp
 sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o: sgemm/CMakeFiles/sgemm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o"
 	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o -MF CMakeFiles/sgemm.dir/src/utils.cpp.o.d -o CMakeFiles/sgemm.dir/src/utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/utils.cpp
 
 sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.i: cmake_force
@@ -115,6 +143,8 @@ sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.s: cmake_force
 sgemm_OBJECTS = \
 "CMakeFiles/sgemm.dir/src/sgemm.cu.o" \
 "CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.o" \
+"CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o" \
+"CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o" \
 "CMakeFiles/sgemm.dir/src/utils.cpp.o"
 
 # External object files for target sgemm
@@ -122,13 +152,15 @@ sgemm_EXTERNAL_OBJECTS =
 
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v0_global_mem.cu.o
+sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v1_shared_mem.cu.o
+sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v2_increase_workload_of_threads.cu.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/build.make
 sgemm/sgemm: /usr/lib/x86_64-linux-gnu/libopenblas.so
 sgemm/sgemm: /usr/local/cuda/lib64/libcudart.so
 sgemm/sgemm: /usr/local/cuda/lib64/libcublas.so
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sgemm"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sgemm"
 	cd /home/crane/dev/cuda_ops/build/sgemm && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sgemm.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
