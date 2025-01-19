@@ -5,7 +5,8 @@ add_executable(sgemm src/sgemm.cu
                 src/sgemm_v1_shared_mem.cu 
                 src/sgemm_v2_increase_workload_of_threads.cu 
                 src/sgemm_v3_float4.cu 
-                src/sgemm_v4_reg.cu
+                src/sgemm_v4_reg.cu 
+                src/sgemm_v5_reg_float4.cu
                 src/utils.cpp)
 
 target_include_directories(sgemm PRIVATE ${CMAKE_SOURCE_DIR}/sgemm/include)

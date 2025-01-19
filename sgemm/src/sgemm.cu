@@ -4,6 +4,7 @@
 #include "sgemm_v2_increase_workload_of_threads.cuh"
 #include "sgemm_v3_float4.cuh"
 #include "sgemm_v4_reg.cuh"
+#include "sgemm_v5_reg_float4.cuh"
 #include <cstdio>
 #include <cuda.h>
 #include <stdlib.h>
@@ -60,10 +61,23 @@ int main()
     //     sgemm3<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
     // }
 
+    // {
+    //     dim3 Block(16 * 16);
+    //     dim3 Grid(m / 32, n / 32);
+    //     sgemm4<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    // }
+
     {
+        constexpr int M_NUM_PER_BLOCK = 64;
+        constexpr int N_NUM_PER_BLOCK = 64;
+        constexpr int K_NUM_PER_BLOCK = 64;
+        constexpr int M_NUM_PER_THREAD = 4;
+        constexpr int N_NUM_PER_THREAD = 4;
+        constexpr int K_NUM_PER_THREAD = 4;
+
         dim3 Block(16 * 16);
-        dim3 Grid(m / 32, n / 32);
-        sgemm4<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+        dim3 Grid(m / M_NUM_PER_BLOCK, n / N_NUM_PER_BLOCK);
+        sgemm5<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
     }
     cudaMemcpy(h_C_d, d_C, memsize_C, cudaMemcpyDeviceToHost);
 
