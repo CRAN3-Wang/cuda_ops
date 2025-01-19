@@ -250,6 +250,30 @@ src/sgemm_v3_float4.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v3_float4.cu.s
 .PHONY : src/sgemm_v3_float4.cu.s
 
+src/sgemm_v4_reg.o: src/sgemm_v4_reg.cu.o
+.PHONY : src/sgemm_v4_reg.o
+
+# target to build an object file
+src/sgemm_v4_reg.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v4_reg.cu.o
+.PHONY : src/sgemm_v4_reg.cu.o
+
+src/sgemm_v4_reg.i: src/sgemm_v4_reg.cu.i
+.PHONY : src/sgemm_v4_reg.i
+
+# target to preprocess a source file
+src/sgemm_v4_reg.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v4_reg.cu.i
+.PHONY : src/sgemm_v4_reg.cu.i
+
+src/sgemm_v4_reg.s: src/sgemm_v4_reg.cu.s
+.PHONY : src/sgemm_v4_reg.s
+
+# target to generate assembly for a file
+src/sgemm_v4_reg.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v4_reg.cu.s
+.PHONY : src/sgemm_v4_reg.cu.s
+
 src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
 
@@ -298,6 +322,9 @@ help:
 	@echo "... src/sgemm_v3_float4.o"
 	@echo "... src/sgemm_v3_float4.i"
 	@echo "... src/sgemm_v3_float4.s"
+	@echo "... src/sgemm_v4_reg.o"
+	@echo "... src/sgemm_v4_reg.i"
+	@echo "... src/sgemm_v4_reg.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

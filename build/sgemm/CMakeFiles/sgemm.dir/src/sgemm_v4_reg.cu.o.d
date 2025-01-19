@@ -1,4 +1,4 @@
-sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/sgemm.cu \
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_v4_reg.cu.o : /home/crane/dev/cuda_ops/sgemm/src/sgemm_v4_reg.cu \
     /usr/include/stdc-predef.h \
     /usr/local/cuda-12.4/include/cuda_runtime.h \
     /usr/local/cuda-12.4/include/crt/host_config.h \
@@ -180,15 +180,4 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /usr/include/c++/11/utility \
     /usr/include/c++/11/bits/stl_relops.h \
     /usr/include/c++/11/initializer_list \
-    /home/crane/dev/cuda_ops/sgemm/include/utils.hpp \
-    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v0_global_mem.cuh \
-    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v1_shared_mem.cuh \
-    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v2_increase_workload_of_threads.cuh \
-    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v3_float4.cuh \
-    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v4_reg.cuh \
-    /usr/include/c++/11/cstdio \
-    /usr/local/cuda-12.4/include/cuda.h \
-    /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-    /usr/include/stdint.h \
-    /usr/include/x86_64-linux-gnu/bits/wchar.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v4_reg.cuh

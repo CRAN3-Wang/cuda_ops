@@ -26,6 +26,7 @@ __global__ void sgemm3(float *A, float *B, float *C, const int M, const int N, c
 #pragma unroll
         for (int i = 0; i < NUM_PER_THREAD; ++i)
         {
+#pragma unroll
             for (int k = 0; k < K_NUM_PER_BLOCK; k++)
             {
                 sum[i] += shared_A[tid_y][k] * shared_B[k][inner_j + i];
