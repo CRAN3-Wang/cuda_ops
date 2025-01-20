@@ -298,6 +298,30 @@ src/sgemm_v5_reg_float4.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.s
 .PHONY : src/sgemm_v5_reg_float4.cu.s
 
+src/sgemm_v6_transpose_A_smem.o: src/sgemm_v6_transpose_A_smem.cu.o
+.PHONY : src/sgemm_v6_transpose_A_smem.o
+
+# target to build an object file
+src/sgemm_v6_transpose_A_smem.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o
+.PHONY : src/sgemm_v6_transpose_A_smem.cu.o
+
+src/sgemm_v6_transpose_A_smem.i: src/sgemm_v6_transpose_A_smem.cu.i
+.PHONY : src/sgemm_v6_transpose_A_smem.i
+
+# target to preprocess a source file
+src/sgemm_v6_transpose_A_smem.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.i
+.PHONY : src/sgemm_v6_transpose_A_smem.cu.i
+
+src/sgemm_v6_transpose_A_smem.s: src/sgemm_v6_transpose_A_smem.cu.s
+.PHONY : src/sgemm_v6_transpose_A_smem.s
+
+# target to generate assembly for a file
+src/sgemm_v6_transpose_A_smem.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.s
+.PHONY : src/sgemm_v6_transpose_A_smem.cu.s
+
 src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
 
@@ -352,6 +376,9 @@ help:
 	@echo "... src/sgemm_v5_reg_float4.o"
 	@echo "... src/sgemm_v5_reg_float4.i"
 	@echo "... src/sgemm_v5_reg_float4.s"
+	@echo "... src/sgemm_v6_transpose_A_smem.o"
+	@echo "... src/sgemm_v6_transpose_A_smem.i"
+	@echo "... src/sgemm_v6_transpose_A_smem.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

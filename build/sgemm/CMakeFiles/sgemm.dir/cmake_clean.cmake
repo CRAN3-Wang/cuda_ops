@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sgemm.dir/src/sgemm_v4_reg.cu.o.d"
   "CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.o"
   "CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.o.d"
+  "CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o"
+  "CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o.d"
   "CMakeFiles/sgemm.dir/src/utils.cpp.o"
   "CMakeFiles/sgemm.dir/src/utils.cpp.o.d"
   "sgemm"
