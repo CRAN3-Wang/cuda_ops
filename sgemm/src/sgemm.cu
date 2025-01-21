@@ -5,6 +5,8 @@
 #include "sgemm_v3_float4.cuh"
 #include "sgemm_v4_reg.cuh"
 #include "sgemm_v5_reg_float4.cuh"
+#include "sgemm_v6_transpose_A_smem.cuh"
+#include "sgemm_v7_double_buffer.cuh"
 #include <cstdio>
 #include <cuda.h>
 #include <stdlib.h>
@@ -67,18 +69,32 @@ int main()
     //     sgemm4<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
     // }
 
+    // {
+    //     constexpr int M_NUM_PER_BLOCK = 64;
+    //     constexpr int N_NUM_PER_BLOCK = 64;
+    //     constexpr int K_NUM_PER_BLOCK = 64;
+    //     constexpr int M_NUM_PER_THREAD = 4;
+    //     constexpr int N_NUM_PER_THREAD = 4;
+    //     constexpr int K_NUM_PER_THREAD = 4;
+
+    //     dim3 Block(16 * 16);
+    //     dim3 Grid(m / M_NUM_PER_BLOCK, n / N_NUM_PER_BLOCK);
+    //     sgemm5<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    //     sgemm6<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+    // }
+
     {
-        constexpr int M_NUM_PER_BLOCK = 64;
-        constexpr int N_NUM_PER_BLOCK = 64;
-        constexpr int K_NUM_PER_BLOCK = 64;
-        constexpr int M_NUM_PER_THREAD = 4;
-        constexpr int N_NUM_PER_THREAD = 4;
-        constexpr int K_NUM_PER_THREAD = 4;
+        constexpr int M_NUM_PER_BLOCK = 128;
+        constexpr int N_NUM_PER_BLOCK = 128;
+        constexpr int K_NUM_PER_BLOCK = 8;
+        constexpr int Y_NUM_PER_THREAD = 8;
+        constexpr int X_NUM_PER_THREAD = 8;
 
         dim3 Block(16 * 16);
-        dim3 Grid(m / M_NUM_PER_BLOCK, n / N_NUM_PER_BLOCK);
-        sgemm5<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+        dim3 Grid(n / N_NUM_PER_BLOCK, m / M_NUM_PER_BLOCK);
+        sgemm7<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, Y_NUM_PER_THREAD, X_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
     }
+
     cudaMemcpy(h_C_d, d_C, memsize_C, cudaMemcpyDeviceToHost);
 
     check(h_C_d, h_C_h, m, n);

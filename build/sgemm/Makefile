@@ -322,6 +322,30 @@ src/sgemm_v6_transpose_A_smem.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.s
 .PHONY : src/sgemm_v6_transpose_A_smem.cu.s
 
+src/sgemm_v7_double_buffer.o: src/sgemm_v7_double_buffer.cu.o
+.PHONY : src/sgemm_v7_double_buffer.o
+
+# target to build an object file
+src/sgemm_v7_double_buffer.cu.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.o
+.PHONY : src/sgemm_v7_double_buffer.cu.o
+
+src/sgemm_v7_double_buffer.i: src/sgemm_v7_double_buffer.cu.i
+.PHONY : src/sgemm_v7_double_buffer.i
+
+# target to preprocess a source file
+src/sgemm_v7_double_buffer.cu.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.i
+.PHONY : src/sgemm_v7_double_buffer.cu.i
+
+src/sgemm_v7_double_buffer.s: src/sgemm_v7_double_buffer.cu.s
+.PHONY : src/sgemm_v7_double_buffer.s
+
+# target to generate assembly for a file
+src/sgemm_v7_double_buffer.cu.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.s
+.PHONY : src/sgemm_v7_double_buffer.cu.s
+
 src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
 
@@ -379,6 +403,9 @@ help:
 	@echo "... src/sgemm_v6_transpose_A_smem.o"
 	@echo "... src/sgemm_v6_transpose_A_smem.i"
 	@echo "... src/sgemm_v6_transpose_A_smem.s"
+	@echo "... src/sgemm_v7_double_buffer.o"
+	@echo "... src/sgemm_v7_double_buffer.i"
+	@echo "... src/sgemm_v7_double_buffer.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

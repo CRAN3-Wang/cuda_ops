@@ -180,4 +180,4 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o : /home/crane/dev/
     /usr/include/c++/11/utility \
     /usr/include/c++/11/bits/stl_relops.h \
     /usr/include/c++/11/initializer_list \
-    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v5_reg_float4.cuh
+    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v6_transpose_A_smem.cuh

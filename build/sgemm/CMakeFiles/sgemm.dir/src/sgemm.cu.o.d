@@ -188,6 +188,7 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.o : /home/crane/dev/cuda_ops/sgemm/src/s
     /home/crane/dev/cuda_ops/sgemm/include/sgemm_v4_reg.cuh \
     /home/crane/dev/cuda_ops/sgemm/include/sgemm_v5_reg_float4.cuh \
     /home/crane/dev/cuda_ops/sgemm/include/sgemm_v6_transpose_A_smem.cuh \
+    /home/crane/dev/cuda_ops/sgemm/include/sgemm_v7_double_buffer.cuh \
     /usr/include/c++/11/cstdio \
     /usr/local/cuda-12.4/include/cuda.h \
     /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
