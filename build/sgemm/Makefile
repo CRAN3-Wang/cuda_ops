@@ -154,6 +154,30 @@ src/sgemm.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm.cu.s
 .PHONY : src/sgemm.cu.s
 
+src/sgemm_utils.o: src/sgemm_utils.cpp.o
+.PHONY : src/sgemm_utils.o
+
+# target to build an object file
+src/sgemm_utils.cpp.o:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o
+.PHONY : src/sgemm_utils.cpp.o
+
+src/sgemm_utils.i: src/sgemm_utils.cpp.i
+.PHONY : src/sgemm_utils.i
+
+# target to preprocess a source file
+src/sgemm_utils.cpp.i:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.i
+.PHONY : src/sgemm_utils.cpp.i
+
+src/sgemm_utils.s: src/sgemm_utils.cpp.s
+.PHONY : src/sgemm_utils.s
+
+# target to generate assembly for a file
+src/sgemm_utils.cpp.s:
+	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.s
+.PHONY : src/sgemm_utils.cpp.s
+
 src/sgemm_v0_global_mem.o: src/sgemm_v0_global_mem.cu.o
 .PHONY : src/sgemm_v0_global_mem.o
 
@@ -346,30 +370,6 @@ src/sgemm_v7_double_buffer.cu.s:
 	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.s
 .PHONY : src/sgemm_v7_double_buffer.cu.s
 
-src/utils.o: src/utils.cpp.o
-.PHONY : src/utils.o
-
-# target to build an object file
-src/utils.cpp.o:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o
-.PHONY : src/utils.cpp.o
-
-src/utils.i: src/utils.cpp.i
-.PHONY : src/utils.i
-
-# target to preprocess a source file
-src/utils.cpp.i:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.i
-.PHONY : src/utils.cpp.i
-
-src/utils.s: src/utils.cpp.s
-.PHONY : src/utils.s
-
-# target to generate assembly for a file
-src/utils.cpp.s:
-	cd /home/crane/dev/cuda_ops/build && $(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.s
-.PHONY : src/utils.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -382,6 +382,9 @@ help:
 	@echo "... src/sgemm.o"
 	@echo "... src/sgemm.i"
 	@echo "... src/sgemm.s"
+	@echo "... src/sgemm_utils.o"
+	@echo "... src/sgemm_utils.i"
+	@echo "... src/sgemm_utils.s"
 	@echo "... src/sgemm_v0_global_mem.o"
 	@echo "... src/sgemm_v0_global_mem.i"
 	@echo "... src/sgemm_v0_global_mem.s"
@@ -406,9 +409,6 @@ help:
 	@echo "... src/sgemm_v7_double_buffer.o"
 	@echo "... src/sgemm_v7_double_buffer.i"
 	@echo "... src/sgemm_v7_double_buffer.s"
-	@echo "... src/utils.o"
-	@echo "... src/utils.i"
-	@echo "... src/utils.s"
 .PHONY : help
 
 

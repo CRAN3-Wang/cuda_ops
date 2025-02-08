@@ -20,3 +20,6 @@
 /home/crane/dev/cuda_ops/build/sgemm/CMakeFiles/sgemm.dir
 /home/crane/dev/cuda_ops/build/sgemm/CMakeFiles/edit_cache.dir
 /home/crane/dev/cuda_ops/build/sgemm/CMakeFiles/rebuild_cache.dir
+/home/crane/dev/cuda_ops/build/sgemv/CMakeFiles/sgemv.dir
+/home/crane/dev/cuda_ops/build/sgemv/CMakeFiles/edit_cache.dir
+/home/crane/dev/cuda_ops/build/sgemv/CMakeFiles/rebuild_cache.dir

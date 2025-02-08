@@ -17,7 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v5_reg_float4.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.o.d"
   "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v6_transpose_A_smem.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o.d"
   "/home/crane/dev/cuda_ops/sgemm/src/sgemm_v7_double_buffer.cu" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.o.d"
-  "/home/crane/dev/cuda_ops/sgemm/src/utils.cpp" "sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o.d"
+  "/home/crane/dev/cuda_ops/sgemm/src/sgemm_utils.cpp" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o" "gcc" "sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o.d"
   )
 
 # Targets to which this target links.

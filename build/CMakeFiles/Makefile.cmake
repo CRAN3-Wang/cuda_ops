@@ -15,6 +15,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../ncu_profile/CMakeLists.txt"
   "../reduce/CMakeLists.txt"
   "../sgemm/CMakeLists.txt"
+  "../sgemv/CMakeLists.txt"
   "/usr/share/cmake-3.22/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCUDAInformation.cmake"
   "/usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake"
@@ -58,6 +59,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "reduce/CMakeFiles/CMakeDirectoryInformation.cmake"
   "ncu_profile/CMakeFiles/CMakeDirectoryInformation.cmake"
   "sgemm/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "sgemv/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -76,4 +78,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "ncu_profile/CMakeFiles/combined_access.dir/DependInfo.cmake"
   "ncu_profile/CMakeFiles/transpose.dir/DependInfo.cmake"
   "sgemm/CMakeFiles/sgemm.dir/DependInfo.cmake"
+  "sgemv/CMakeFiles/sgemv.dir/DependInfo.cmake"
   )

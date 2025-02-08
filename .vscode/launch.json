@@ -5,7 +5,7 @@
             "name": "CUDA C++: Launch",
             "type": "cuda-gdb",
             "request": "launch",
-            "program": "${workspaceFolder}/build/sgemm/sgemm"
+            "program": "${workspaceFolder}/build/sgemv/sgemv"
         },
         {
             "name": "CUDA C++: Attach",

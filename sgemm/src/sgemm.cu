@@ -1,4 +1,4 @@
-#include "utils.hpp"
+#include "sgemm_utils.hpp"
 #include "sgemm_v0_global_mem.cuh"
 #include "sgemm_v1_shared_mem.cuh"
 #include "sgemm_v2_increase_workload_of_threads.cuh"

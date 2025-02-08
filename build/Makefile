@@ -298,6 +298,19 @@ sgemm/fast:
 	$(MAKE) $(MAKESILENT) -f sgemm/CMakeFiles/sgemm.dir/build.make sgemm/CMakeFiles/sgemm.dir/build
 .PHONY : sgemm/fast
 
+#=============================================================================
+# Target rules for targets named sgemv
+
+# Build rule for target.
+sgemv: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sgemv
+.PHONY : sgemv
+
+# fast build rule for target.
+sgemv/fast:
+	$(MAKE) $(MAKESILENT) -f sgemv/CMakeFiles/sgemv.dir/build.make sgemv/CMakeFiles/sgemv.dir/build
+.PHONY : sgemv/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -319,6 +332,7 @@ help:
 	@echo "... reduce_v7_block_num"
 	@echo "... reduce_v8_shuffle"
 	@echo "... sgemm"
+	@echo "... sgemv"
 	@echo "... transpose"
 .PHONY : help
 

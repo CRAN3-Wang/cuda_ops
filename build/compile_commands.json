@@ -111,7 +111,32 @@
 },
 {
   "directory": "/home/crane/dev/cuda_ops/build/sgemm",
-  "command": "/usr/bin/g++  -I/home/crane/dev/cuda_ops/sgemm/include -isystem /usr/local/cuda/include -g -o CMakeFiles/sgemm.dir/src/utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/utils.cpp",
-  "file": "/home/crane/dev/cuda_ops/sgemm/src/utils.cpp"
+  "command": "/usr/bin/g++  -I/home/crane/dev/cuda_ops/sgemm/include -isystem /usr/local/cuda/include -g -o CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_utils.cpp",
+  "file": "/home/crane/dev/cuda_ops/sgemm/src/sgemm_utils.cpp"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemv",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemv/include -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G -x cu -c /home/crane/dev/cuda_ops/sgemv/src/sgemv.cu -o CMakeFiles/sgemv.dir/src/sgemv.cu.o",
+  "file": "/home/crane/dev/cuda_ops/sgemv/src/sgemv.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemv",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemv/include -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G -x cu -c /home/crane/dev/cuda_ops/sgemv/src/sgemv_v0_32.cu -o CMakeFiles/sgemv.dir/src/sgemv_v0_32.cu.o",
+  "file": "/home/crane/dev/cuda_ops/sgemv/src/sgemv_v0_32.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemv",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemv/include -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G -x cu -c /home/crane/dev/cuda_ops/sgemv/src/sgemv_v1_float4.cu -o CMakeFiles/sgemv.dir/src/sgemv_v1_float4.cu.o",
+  "file": "/home/crane/dev/cuda_ops/sgemv/src/sgemv_v1_float4.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemv",
+  "command": "/usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler  -I/home/crane/dev/cuda_ops/sgemv/include -isystem=/usr/local/cuda/include -g --generate-code=arch=compute_52,code=[compute_52,sm_52] -G -x cu -c /home/crane/dev/cuda_ops/sgemv/src/sgemv_v2_16.cu -o CMakeFiles/sgemv.dir/src/sgemv_v2_16.cu.o",
+  "file": "/home/crane/dev/cuda_ops/sgemv/src/sgemv_v2_16.cu"
+},
+{
+  "directory": "/home/crane/dev/cuda_ops/build/sgemv",
+  "command": "/usr/bin/g++  -I/home/crane/dev/cuda_ops/sgemv/include -isystem /usr/local/cuda/include -g -o CMakeFiles/sgemv.dir/src/sgemv_utils.cpp.o -c /home/crane/dev/cuda_ops/sgemv/src/sgemv_utils.cpp",
+  "file": "/home/crane/dev/cuda_ops/sgemv/src/sgemv_utils.cpp"
 }
 ]

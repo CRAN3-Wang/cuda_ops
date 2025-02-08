@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "cstdio": "cpp",
+        "sstream": "cpp",
+        "*.tcc": "cpp",
+        "bitset": "cpp",
+        "condition_variable": "cpp",
+        "string_view": "cpp",
+        "type_traits": "cpp",
+        "algorithm": "cpp",
+        "__cccl_config": "cpp",
+        "__hash_table": "cpp",
+        "__locale": "cpp",
+        "__threading_support": "cpp",
+        "locale": "cpp",
+        "string": "cpp",
+        "typeinfo": "cpp"
+    }
+}

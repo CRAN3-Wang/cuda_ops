@@ -195,19 +195,19 @@ sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CUDA source to assembly CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
-sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o: sgemm/CMakeFiles/sgemm.dir/flags.make
-sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o: ../sgemm/src/utils.cpp
-sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o: sgemm/CMakeFiles/sgemm.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o"
-	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o -MF CMakeFiles/sgemm.dir/src/utils.cpp.o.d -o CMakeFiles/sgemm.dir/src/utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/utils.cpp
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o: sgemm/CMakeFiles/sgemm.dir/flags.make
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o: ../sgemm/src/sgemm_utils.cpp
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o: sgemm/CMakeFiles/sgemm.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/crane/dev/cuda_ops/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o"
+	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o -MF CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o.d -o CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o -c /home/crane/dev/cuda_ops/sgemm/src/sgemm_utils.cpp
 
-sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sgemm.dir/src/utils.cpp.i"
-	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/crane/dev/cuda_ops/sgemm/src/utils.cpp > CMakeFiles/sgemm.dir/src/utils.cpp.i
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.i"
+	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/crane/dev/cuda_ops/sgemm/src/sgemm_utils.cpp > CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.i
 
-sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sgemm.dir/src/utils.cpp.s"
-	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/crane/dev/cuda_ops/sgemm/src/utils.cpp -o CMakeFiles/sgemm.dir/src/utils.cpp.s
+sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.s"
+	cd /home/crane/dev/cuda_ops/build/sgemm && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/crane/dev/cuda_ops/sgemm/src/sgemm_utils.cpp -o CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.s
 
 # Object files for target sgemm
 sgemm_OBJECTS = \
@@ -220,7 +220,7 @@ sgemm_OBJECTS = \
 "CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.o" \
 "CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o" \
 "CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.o" \
-"CMakeFiles/sgemm.dir/src/utils.cpp.o"
+"CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o"
 
 # External object files for target sgemm
 sgemm_EXTERNAL_OBJECTS =
@@ -234,7 +234,7 @@ sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v4_reg.cu.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v5_reg_float4.cu.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v6_transpose_A_smem.cu.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_v7_double_buffer.cu.o
-sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/utils.cpp.o
+sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/src/sgemm_utils.cpp.o
 sgemm/sgemm: sgemm/CMakeFiles/sgemm.dir/build.make
 sgemm/sgemm: /usr/lib/x86_64-linux-gnu/libopenblas.so
 sgemm/sgemm: /usr/local/cuda/lib64/libcudart.so

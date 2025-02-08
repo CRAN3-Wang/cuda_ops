@@ -1,4 +1,4 @@
-#include "../include/utils.hpp"
+#include "sgemm_utils.hpp"
 #include <cstdio>
 #include <stdlib.h>
 #include <cblas.h>
