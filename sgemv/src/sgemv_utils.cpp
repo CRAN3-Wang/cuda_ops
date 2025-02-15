@@ -34,6 +34,8 @@ void cublas_sgemv(float *d_A, float *d_x, float *d_y, const int m, const int n)
     float beta = 0.0f;
 
     cublasSgemv(blas_handle, CUBLAS_OP_T, n, m, &alpha, d_A, n, d_x, 1, &beta, d_y, 1);
+
+    cublasDestroy(blas_handle);
 }
 
 void check(float *h_mysgemv_y, float *h_cublas_y, const int m)

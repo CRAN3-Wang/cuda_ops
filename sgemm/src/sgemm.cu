@@ -7,6 +7,8 @@
 #include "sgemm_v5_reg_float4.cuh"
 #include "sgemm_v6_transpose_A_smem.cuh"
 #include "sgemm_v7_double_buffer.cuh"
+#include "sgemm_v8_double_reg.cuh"
+#include "sgemm_comp.cuh"
 #include <cstdio>
 #include <cuda.h>
 #include <stdlib.h>
@@ -27,61 +29,64 @@ int main()
 
     float *h_A = (float *)malloc(memsize_A);
     float *h_B = (float *)malloc(memsize_B);
-    float *h_C_h = (float *)malloc(memsize_C);
-    float *h_C_d = (float *)malloc(memsize_C);
+    float *h_C_cublas = (float *)malloc(memsize_C);
+    float *h_C_mysgemm = (float *)malloc(memsize_C);
+    float *h_C_cblas = (float *)malloc(memsize_C);
 
     randomMatrix(m, k, h_A);
     randomMatrix(k, n, h_B);
 
-    cpu_sgemm(h_A, h_B, h_C_h, m, n, k);
-
-    float *d_A, *d_B, *d_C;
+    float *d_A, *d_B, *d_C_mysgemm, *d_C_cublas;
     cudaMalloc((void **)&d_A, memsize_A);
     cudaMalloc((void **)&d_B, memsize_B);
-    cudaMalloc((void **)&d_C, memsize_C);
+    cudaMalloc((void **)&d_C_mysgemm, memsize_C);
+    cudaMalloc((void **)&d_C_cublas, memsize_C);
 
     cudaMemcpy(d_A, h_A, memsize_A, cudaMemcpyHostToDevice);
     cudaMemcpy(d_B, h_B, memsize_B, cudaMemcpyHostToDevice);
 
-    // {
-    //     dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
-    //     dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK);
+    cublas_sgemm(d_A, d_B, d_C_cublas, m, n, k);
+    cpu_sgemm(h_A, h_B, h_C_cblas, m, n, k);
 
-    //     sgemm0<<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    //     sgemm1<THREAD_PER_BLOCK><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    // }
+    {
+        dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
+        dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK);
 
-    // {
-    //     dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
-    //     dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK / STRIDE, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK / STRIDE);
-    //     sgemm2<THREAD_PER_BLOCK, STRIDE><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    // }
+        sgemm0<<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+        sgemm1<THREAD_PER_BLOCK><<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+    }
 
-    // {
-    //     dim3 Block(8, 32);
-    //     dim3 Grid(m / 32, n / 32);
-    //     sgemm3<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    // }
+    {
+        dim3 Block(THREAD_PER_BLOCK, THREAD_PER_BLOCK);
+        dim3 Grid((n + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK / STRIDE, (m + THREAD_PER_BLOCK - 1) / THREAD_PER_BLOCK / STRIDE);
+        sgemm2<THREAD_PER_BLOCK, STRIDE><<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+    }
 
-    // {
-    //     dim3 Block(16 * 16);
-    //     dim3 Grid(m / 32, n / 32);
-    //     sgemm4<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    // }
+    {
+        dim3 Block(8, 32);
+        dim3 Grid(m / 32, n / 32);
+        sgemm3<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+    }
 
-    // {
-    //     constexpr int M_NUM_PER_BLOCK = 64;
-    //     constexpr int N_NUM_PER_BLOCK = 64;
-    //     constexpr int K_NUM_PER_BLOCK = 64;
-    //     constexpr int M_NUM_PER_THREAD = 4;
-    //     constexpr int N_NUM_PER_THREAD = 4;
-    //     constexpr int K_NUM_PER_THREAD = 4;
+    {
+        dim3 Block(16 * 16);
+        dim3 Grid(m / 32, n / 32);
+        sgemm4<32, 32, 32, 4><<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+    }
 
-    //     dim3 Block(16 * 16);
-    //     dim3 Grid(m / M_NUM_PER_BLOCK, n / N_NUM_PER_BLOCK);
-    //     sgemm5<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    //     sgemm6<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
-    // }
+    {
+        constexpr int M_NUM_PER_BLOCK = 64;
+        constexpr int N_NUM_PER_BLOCK = 64;
+        constexpr int K_NUM_PER_BLOCK = 64;
+        constexpr int M_NUM_PER_THREAD = 4;
+        constexpr int N_NUM_PER_THREAD = 4;
+        constexpr int K_NUM_PER_THREAD = 4;
+
+        dim3 Block(16 * 16);
+        dim3 Grid(m / M_NUM_PER_BLOCK, n / N_NUM_PER_BLOCK);
+        sgemm5<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+        sgemm6<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, M_NUM_PER_THREAD, N_NUM_PER_THREAD, K_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+    }
 
     {
         constexpr int M_NUM_PER_BLOCK = 128;
@@ -90,22 +95,28 @@ int main()
         constexpr int Y_NUM_PER_THREAD = 8;
         constexpr int X_NUM_PER_THREAD = 8;
 
-        dim3 Block(16 * 16);
+        // dim3 Block(16 * 16);
         dim3 Grid(n / N_NUM_PER_BLOCK, m / M_NUM_PER_BLOCK);
-        sgemm7<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, Y_NUM_PER_THREAD, X_NUM_PER_THREAD><<<Grid, Block>>>(d_A, d_B, d_C, m, n, k);
+
+        sgemm7<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, Y_NUM_PER_THREAD, X_NUM_PER_THREAD><<<Grid, dim3(16 * 16)>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+
+        sgemm8<M_NUM_PER_BLOCK, N_NUM_PER_BLOCK, K_NUM_PER_BLOCK, Y_NUM_PER_THREAD, X_NUM_PER_THREAD><<<Grid, dim3(16 * 16)>>>(d_A, d_B, d_C_mysgemm, m, n, k);
+
+        Sgemm<M_NUM_PER_BLOCK, K_NUM_PER_BLOCK, N_NUM_PER_BLOCK, Y_NUM_PER_THREAD, X_NUM_PER_THREAD, true><<<Grid, dim3(16 * 16)>>>(d_A, d_B, d_C_mysgemm, m, n, k);
     }
 
-    cudaMemcpy(h_C_d, d_C, memsize_C, cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_C_mysgemm, d_C_mysgemm, memsize_C, cudaMemcpyDeviceToHost);
 
-    check(h_C_d, h_C_h, m, n);
+    check(h_C_mysgemm, h_C_cblas, m, n);
 
     cudaFree(d_A);
     cudaFree(d_B);
-    cudaFree(d_C);
+    cudaFree(d_C_mysgemm);
+    cudaFree(d_C_cublas);
     free(h_A);
     free(h_B);
-    free(h_C_h);
-    free(h_C_d);
+    free(h_C_cublas);
+    free(h_C_mysgemm);
 
     return 0;
 }

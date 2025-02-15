@@ -11,7 +11,7 @@
 int main()
 {
     int m = 256;
-    int n = 128;
+    int n = 16;
 
     size_t memsize_A = m * n * sizeof(float);
     size_t memsize_x = n * sizeof(float);
@@ -35,29 +35,28 @@ int main()
     cudaMalloc((void **)&d_mysgemv_y, memsize_y);
     cudaMalloc((void **)&d_cublas_y, memsize_y);
 
-    cudaError_t err;
+    cudaMemcpy(d_A, h_A, memsize_A, cudaMemcpyHostToDevice);
+    cudaMemcpy(d_x, h_x, memsize_x, cudaMemcpyHostToDevice);
 
-    err = cudaMemcpy(d_A, h_A, memsize_A, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
+    // {
+    //     dim3 Grid(m / 4);
+    //     dim3 Block(32, 4);
+    //     sgemv0<<<Grid, Block>>>(d_A, d_x, d_mysgemv_y, m, n);
+    // }
+
+    // {
+    //     dim3 Grid(m / 4);
+    //     dim3 Block(32, 4);
+    //     sgemv1<<<Grid, Block>>>(d_A, d_x, d_mysgemv_y, m, n);
+    // }
+
     {
-        printf("Failed to copy data from host to device for d_A: %s\n", cudaGetErrorString(err));
-        return -1;
+        dim3 Grid(m / 8);
+        dim3 Block(32, 4);
+        sgemv2<2><<<Grid, Block>>>(d_A, d_x, d_mysgemv_y, m, n);
     }
-    err = cudaMemcpy(d_x, h_x, memsize_x, cudaMemcpyHostToDevice);
-    if (err != cudaSuccess)
-    {
-        printf("Failed to copy data from host to device for d_A: %s\n", cudaGetErrorString(err));
-        return -1;
-    }
-
-    dim3 Grid(m / 4);
-    dim3 Block(32, 4);
-
-    // sgemv0<<<Grid, Block>>>(d_A, d_x, d_mysgemv_y, m, n);
-    sgemv1<<<Grid, Block>>>(d_A, d_x, d_mysgemv_y, m, n);
-    // sgemv2<2><<<Grid, Block>>>(d_A, d_x, d_mysgemv_y, m, n);
     cudaMemcpy(h_mysgemv_y, d_mysgemv_y, memsize_y, cudaMemcpyDeviceToHost);
-    
+
     cublas_sgemv(d_A, d_x, d_cublas_y, m, n);
     cudaMemcpy(h_cublas_y, d_cublas_y, memsize_y, cudaMemcpyDeviceToHost);
 

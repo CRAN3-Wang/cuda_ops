@@ -67,10 +67,10 @@ __global__ void sgemm7(float *A, float *B, float *C, const int M, const int N, c
             FETCH_FLOAT4(b_reg[4]) = FETCH_FLOAT4(shared_B[write_stage_idx][k][ctid_x * X_NUM_PER_THREAD + 4]);
 
             // Unroll the loops to improve performance
-#pragma unroll 4
+#pragma unroll
             for (int ii = 0; ii < Y_NUM_PER_THREAD; ii++)
             {
-#pragma unroll 4
+#pragma unroll
                 for (int jj = 0; jj < X_NUM_PER_THREAD; jj++)
                 {
                     sum[ii][jj] += a_reg[ii] * b_reg[jj];
@@ -88,10 +88,10 @@ __global__ void sgemm7(float *A, float *B, float *C, const int M, const int N, c
         FETCH_FLOAT4(b_reg[0]) = FETCH_FLOAT4(shared_B[write_stage_idx][k][ctid_x * X_NUM_PER_THREAD + 0]);
         FETCH_FLOAT4(b_reg[4]) = FETCH_FLOAT4(shared_B[write_stage_idx][k][ctid_x * X_NUM_PER_THREAD + 4]);
 
-#pragma unroll 4
+#pragma unroll
         for (int ii = 0; ii < Y_NUM_PER_THREAD; ii++)
         {
-#pragma unroll 4
+#pragma unroll
             for (int jj = 0; jj < X_NUM_PER_THREAD; jj++)
             {
                 sum[ii][jj] += a_reg[ii] * b_reg[jj];
@@ -100,7 +100,7 @@ __global__ void sgemm7(float *A, float *B, float *C, const int M, const int N, c
     }
 
     float *C_start = C + blockIdx.y * M_NUM_PER_BLOCK * N + blockIdx.x * N_NUM_PER_BLOCK;
-#pragma unroll 4
+#pragma unroll
     for (int i = 0; i < Y_NUM_PER_THREAD; i++)
     {
         FETCH_FLOAT4(C_start[(i + ctid_y * Y_NUM_PER_THREAD) * N + ctid_x * X_NUM_PER_THREAD + 0]) = FETCH_FLOAT4(sum[i][0]);

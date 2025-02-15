@@ -9,6 +9,8 @@ add_executable(sgemm src/sgemm.cu
                 src/sgemm_v5_reg_float4.cu
                 src/sgemm_v6_transpose_A_smem.cu
                 src/sgemm_v7_double_buffer.cu
+                src/sgemm_v8_double_reg.cu
+                src/sgemm_comp.cu
                 src/sgemm_utils.cpp)
 
 target_include_directories(sgemm PRIVATE ${CMAKE_SOURCE_DIR}/sgemm/include)
